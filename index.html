@@ -141,7 +141,7 @@
                         <button class="btn btn-p" onclick="goTo('projects')">View My Work →</button>
                         <button class="btn btn-g" onclick="goTo('contact')">Let's Talk</button>
 
-                        <a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing"
+                        <a href="https://drive.google.com/file/d/1qSBhC4J_Aaqg9dF6xdNX06DwgdTMvhX8/view?usp=drive_link"
                            target="_blank"
                            rel="noopener noreferrer"
                            class="btn btn-g">
@@ -1061,8 +1061,7 @@
             <footer>
                 <div class="footer-inner">
                     <span class="footer-name">Paribartan Kalathoki</span>
-                    <span class="footer-cr">© 2025 · Paribartan Kalathoki · London, United Kingdom · Built with ❤️ — <button
-                            onclick="showAdminLogin()"
+                    <span class="footer-cr">© 2026 · Paribartan Kalathoki · London, United Kingdom · Built with ❤️ — <button
                             style="background:none;border:none;color:var(--mut2);font-size:.72rem;cursor:pointer;padding:0;font-family:inherit">Admin</button></span>
                     <div class="footer-dots">
                         <div class="fdot" style="background:var(--accent)"></div>
@@ -1078,118 +1077,9 @@
 <!-- ═════════════════════════════════════
    ADMIN LOGIN VIEW
 ════════════════════════════════════════ -->
-<div id="view-admin-login" class="view" style="display:none">
-    <div class="login-card">
-        <div class="login-logo">
-            <span class="emoji">🔐</span>
-            <h1>Admin Panel</h1>
-            <p>Portfolio management dashboard</p>
-        </div>
-        <div class="fg"><label class="form-label">Username</label><input class="fc" id="adm-user" placeholder="admin"
-                                                                         value="admin"></div>
-        <div class="fg"><label class="form-label">Password</label>
-            <div class="pw-wrap"><input class="fc" id="adm-pass" type="password" placeholder="Enter password"
-                                        onkeydown="if(event.key==='Enter')doLogin()">
-                <button class="pw-eye" onclick="togglePw()">👁</button>
-            </div>
-        </div>
-        <button class="btn btn-p" style="width:100%;justify-content:center" onclick="doLogin()">Sign In →</button>
-        <div class="login-hint">Demo: username <strong>admin</strong> · password <strong>admin123</strong></div>
-        <div style="text-align:center;margin-top:1rem">
-            <button onclick="showPortfolio()"
-                    style="background:none;border:none;color:var(--mut);font-size:.8rem;cursor:pointer;font-family:inherit">
-                ← Back
-                to portfolio
-            </button>
-        </div>
-    </div>
-</div>
-
 <!-- ═════════════════════════════════════
    ADMIN DASHBOARD VIEW
 ════════════════════════════════════════ -->
-<div id="view-admin" class="view">
-    <!-- Admin mobile top nav -->
-    <div class="adm-mob-bar" id="adm-mob-bar">
-        <div class="adm-mob-logo">⚡ Admin</div>
-        <div class="adm-mob-tabs">
-            <button class="adm-mob-tab active" data-adm="dashboard" onclick="admNav('dashboard')">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/>
-                </svg>
-                <span>Dashboard</span>
-            </button>
-            <button class="adm-mob-tab" data-adm="projects" onclick="admNav('projects')">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                </svg>
-                <span>Projects</span>
-            </button>
-        </div>
-        <div class="adm-mob-actions">
-            <button class="adm-mob-action" onclick="showPortfolio()" title="View Portfolio">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="17" height="17">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                </svg>
-            </button>
-            <button class="adm-mob-action" onclick="admLogout()" title="Logout" style="color:var(--pink)">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="17" height="17">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- Admin sidebar -->
-    <aside class="adm-sb">
-        <div class="adm-sb-top">
-            <div class="adm-sb-logo">⚡ Admin Panel</div>
-            <div class="adm-sb-sub">Paribartan Kalathoki Portfolio</div>
-        </div>
-        <nav class="adm-nav">
-            <button class="adm-nit active" data-adm="dashboard" onclick="admNav('dashboard')">
-                <svg fill="none"
-                     stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/>
-                </svg>
-                Dashboard
-            </button>
-            <button class="adm-nit" data-adm="projects" onclick="admNav('projects')">
-                <svg fill="none" stroke="currentColor"
-                     stroke-width="2" viewBox="0 0 24 24" width="16" height="16">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                </svg>
-                Projects
-            </button>
-        </nav>
-        <div class="adm-sb-foot">
-            <button class="adm-nit" onclick="admLogout()" style="color:var(--mut)">
-                <svg fill="none" stroke="currentColor"
-                     stroke-width="2" viewBox="0 0 24 24" width="16" height="16">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
-                </svg>
-                Logout
-            </button>
-            <button class="adm-nit" onclick="showPortfolio()" style="color:var(--accent3)">
-                <svg fill="none"
-                     stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                </svg>
-                View Portfolio
-            </button>
-        </div>
-    </aside>
-    <!-- Admin main area -->
-    <div class="adm-main" id="adm-main"></div>
-</div>
 
 <!-- ═══ MOBILE BOTTOM NAV ═══ -->
 <nav class="mob-nav" id="mob-nav">
@@ -1326,22 +1216,14 @@
         <span class="ps-it-arr">›</span>
     </div>
     <div class="ps-sec">Actions</div>
-    <a href="#" class="ps-it">
+    <a href="https://drive.google.com/file/d/1qSBhC4J_Aaqg9dF6xdNX06DwgdTMvhX8/view?usp=drive_link" target="_blank" class="ps-it">
         <div class="ps-it-ico" style="background:rgba(108,99,255,.12)">📄</div>
         <div>
             <div class="ps-it-lbl">Download Resume</div>
-            <div class="ps-it-sub">PDF · Updated Jan 2025</div>
+            <div class="ps-it-sub">PDF · Updated Jan 2026</div>
         </div>
         <span class="ps-it-arr">↓</span>
     </a>
-    <div class="ps-it" onclick="showAdminLogin()">
-        <div class="ps-it-ico" style="background:rgba(239,68,68,.08)">🔐</div>
-        <div>
-            <div class="ps-it-lbl">Admin Login</div>
-            <div class="ps-it-sub">Portfolio management</div>
-        </div>
-        <span class="ps-it-arr">›</span>
-    </div>
     <div class="ps-sec">Connect</div>
     <div class="ps-socs">
         <a href="https://github.com/paribartankalathoki" target="_blank" class="ps-soc" title="GitHub">
@@ -1456,219 +1338,19 @@
     /* ════ VIEW SWITCHER ════ */
     function showView(id) {
         document.getElementById('view-portfolio').style.display = 'none';
-        document.getElementById('view-admin-login').style.display = 'none';
-        document.getElementById('view-admin').style.display = 'none';
         document.body.classList.toggle('in-portfolio', id === 'portfolio');
         document.body.classList.toggle('in-admin', id === 'admin');
         if (id === 'portfolio') {
             document.getElementById('view-portfolio').style.display = 'block';
-        } else if (id === 'admin-login') {
-            document.getElementById('view-admin-login').style.display = 'flex';
-        } else if (id === 'admin') {
-            document.getElementById('view-admin').style.display = 'flex';
         }
         window.scrollTo(0, 0);
     }
-
-    function showPortfolio() {
-        showView('portfolio');
-    }
-
-    function showAdminLogin() {
-        closeSheet();
-        showView('admin-login');
-    }
-
-    /* ════ AUTH ════ */
-    function doLogin() {
-        const u = document.getElementById('adm-user').value.trim();
-        const p = document.getElementById('adm-pass').value;
-        if (u === 'admin' && p === 'admin123') {
-            showView('admin');
-            admNav('dashboard');
-            toast('Welcome back, Alex! 👋', 'ok');
-        } else {
-            toast('Invalid credentials', 'err');
-        }
-    }
-
-    function admLogout() {
-        showView('admin-login');
-        toast('Logged out', 'info');
-    }
-
-    function togglePw() {
-        const f = document.getElementById('adm-pass');
-        f.type = f.type === 'password' ? 'text' : 'password';
-    }
-
-    /* ════ ADMIN NAV ════ */
-    function admNav(tab) {
-        document.querySelectorAll('.adm-nit[data-adm]').forEach(b => b.classList.toggle('active', b.dataset.adm === tab));
-        document.querySelectorAll('.adm-mob-tab[data-adm]').forEach(b => b.classList.toggle('active', b.dataset.adm === tab));
-        const m = document.getElementById('adm-main');
-        if (tab === 'dashboard') renderAdmDash(m);
-        else if (tab === 'projects') renderAdmProjects(m, 1);
-    }
-
-    /* ── Dashboard ── */
-    function renderAdmDash(m) {
-        m.innerHTML = `
-  <div class="adm-hdr"><div><div class="adm-hdr-title">Dashboard</div><div class="adm-hdr-sub">Welcome back, Paribartan</div></div></div>
-  <div class="adm-stats">
-    <div class="adm-stat"><div class="adm-stat-ico" style="background:rgba(16,217,160,.1)">🚀</div><div><div class="adm-stat-n">${projects.length}</div><div class="adm-stat-l">Projects</div></div></div>
-    <div class="adm-stat"><div class="adm-stat-ico" style="background:rgba(108,99,255,.12)">🛠️</div><div><div class="adm-stat-n">4+</div><div class="adm-stat-l">Years Exp</div></div></div>
-    <div class="adm-stat"><div class="adm-stat-ico" style="background:rgba(251,146,60,.1)">📍</div><div><div class="adm-stat-n">UK</div><div class="adm-stat-l">Location</div></div></div>
-    <div class="adm-stat"><div class="adm-stat-ico" style="background:rgba(244,114,182,.1)">✅</div><div><div class="adm-stat-n">Open</div><div class="adm-stat-l">For Work</div></div></div>
-  </div>
-  <div style="margin-top:1.5rem">
-    <div class="adm-table-wrap">
-      <div class="adm-table-top"><span style="font-weight:700;font-size:.88rem;color:var(--txt)">Projects Overview</span><button class="btn btn-g btn-sm" onclick="admNav('projects')">Manage</button></div>
-      <table><thead><tr><th>Title</th><th>Category</th><th>Badge</th></tr></thead><tbody>
-      ${projects.slice(0, 6).map(p => `<tr><td style="font-weight:600;font-size:.82rem">${p.emoji || ''} ${p.title}</td><td style="font-size:.76rem;color:var(--mut)">${p.cat}</td><td><span class="adm-status status-published">${p.badge}</span></td></tr>`).join('')}
-      </tbody></table>
-    </div>
-  </div>`;
-    }
-
-    /* ── Projects ── */
-    let admProjPage = 1;
-
-    function renderAdmProjects(m, pg = 1) {
-        admProjPage = pg;
-        const total = projects.length, pages = Math.max(1, Math.ceil(total / ADM_PER));
-        const slice = projects.slice((pg - 1) * ADM_PER, pg * ADM_PER);
-        m.innerHTML = `
-  <div class="adm-hdr"><div><div class="adm-hdr-title">Projects</div><div class="adm-hdr-sub">${total} projects</div></div>
-    <button class="btn btn-p btn-sm" onclick="openNewProject()"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>New Project</button>
-  </div>
-  <div class="adm-proj-g">
-  ${slice.map(p => `<div class="adm-pj">
-    <div class="adm-pj-ban" style="background:var(--card2)">${p.emoji || '🚀'}</div>
-    <div class="adm-pj-body">
-      <div class="adm-pj-t">${p.title}</div>
-      <div class="adm-pj-cat">${p.badge} · ${p.cat}</div>
-      <div style="font-size:.74rem;color:var(--mut);margin-bottom:.7rem;line-height:1.55">${p.desc}</div>
-      <div class="adm-pj-acts">
-        <button class="adm-act" onclick="openEditProject(${p.id})" title="Edit"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg></button>
-        <button class="adm-act del" onclick="askDelete(${p.id},'project')" title="Delete"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
-      </div>
-    </div>
-  </div>`).join('')}
-  </div>
-  ${pages > 1 ? `<div class="adm-table-wrap"><div class="adm-pagination"><span class="adm-pg-info">Page ${pg} of ${pages}</span><div style="display:flex;gap:.35rem"><button class="pg-btn" onclick="renderAdmProjects(document.getElementById('adm-main'),${pg - 1})" ${pg <= 1 ? 'disabled' : ''}>‹</button>${Array.from({length: pages}, (_, i) => `<button class="pg-btn${i + 1 === pg ? ' cur' : ''}" onclick="renderAdmProjects(document.getElementById('adm-main'),${i + 1})">${i + 1}</button>`).join('')}<button class="pg-btn" onclick="renderAdmProjects(document.getElementById('adm-main'),${pg + 1})" ${pg >= pages ? 'disabled' : ''}>›</button></div></div></div>` : ''}`;
-    }
-
-    /* ── Project CRUD ── */
-    function openNewProject() {
-        document.getElementById('post-ov-ttl').textContent = 'New Project';
-        editId = null;
-        delType = 'project';
-        // repurpose modal for project
-        document.getElementById('post-ov').innerHTML = `
-  <div class="modal">
-    <div class="m-hd"><div class="m-title">New Project</div><button class="xbtn" onclick="closeOv('post-ov')">✕</button></div>
-    <div class="m-bd">
-      <div class="fg"><label class="form-label">Title *</label><input class="fc" id="pj-title" placeholder="Project name..."></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
-        <div class="fg"><label class="form-label">Category</label><select class="fc" id="pj-cat"><option value="fullstack">Full Stack</option><option value="frontend">Frontend</option><option value="backend">Backend</option><option value="mobile">Mobile</option></select></div>
-        <div class="fg"><label class="form-label">Badge Label</label><input class="fc" id="pj-badge" placeholder="Full Stack"></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
-        <div class="fg"><label class="form-label">Emoji Icon</label><input class="fc" id="pj-emoji" placeholder="🚀" maxlength="4"></div>
-        <div class="fg"><label class="form-label">Tags (comma separated)</label><input class="fc" id="pj-tags" placeholder="React, Node.js"></div>
-      </div>
-      <div class="fg"><label class="form-label">Description *</label><textarea class="fc" id="pj-desc" style="min-height:80px" placeholder="Short project description..."></textarea></div>
-    </div>
-    <div class="m-ft"><button class="btn btn-g btn-sm" onclick="closeOv('post-ov')">Cancel</button><button class="btn btn-p btn-sm" onclick="saveProject()">Save Project →</button></div>
-  </div>`;
-        openOv('post-ov');
-    }
-
-    function openEditProject(id) {
-        const p = projects.find(x => x.id === id);
-        if (!p) return;
-        editId = id;
-        delType = 'project';
-        document.getElementById('post-ov').innerHTML = `
-  <div class="modal">
-    <div class="m-hd"><div class="m-title">Edit Project</div><button class="xbtn" onclick="closeOv('post-ov')">✕</button></div>
-    <div class="m-bd">
-      <div class="fg"><label class="form-label">Title *</label><input class="fc" id="pj-title" value="${p.title}"></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
-        <div class="fg"><label class="form-label">Category</label><select class="fc" id="pj-cat"><option value="fullstack" ${p.cat === 'fullstack' ? 'selected' : ''}>Full Stack</option><option value="frontend" ${p.cat === 'frontend' ? 'selected' : ''}>Frontend</option><option value="backend" ${p.cat === 'backend' ? 'selected' : ''}>Backend</option><option value="mobile" ${p.cat === 'mobile' ? 'selected' : ''}>Mobile</option></select></div>
-        <div class="fg"><label class="form-label">Badge Label</label><input class="fc" id="pj-badge" value="${p.badge || ''}"></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
-        <div class="fg"><label class="form-label">Emoji Icon</label><input class="fc" id="pj-emoji" value="${p.emoji || '🚀'}" maxlength="4"></div>
-        <div class="fg"><label class="form-label">Tags</label><input class="fc" id="pj-tags" value="${(p.tags || []).join(', ')}"></div>
-      </div>
-      <div class="fg"><label class="form-label">Description *</label><textarea class="fc" id="pj-desc" style="min-height:80px">${p.desc || ''}</textarea></div>
-    </div>
-    <div class="m-ft"><button class="btn btn-g btn-sm" onclick="closeOv('post-ov')">Cancel</button><button class="btn btn-p btn-sm" onclick="saveProject()">Update →</button></div>
-  </div>`;
-        openOv('post-ov');
-    }
-
-    function saveProject() {
-        const title = (document.getElementById('pj-title') || {}).value?.trim();
-        const desc = (document.getElementById('pj-desc') || {}).value?.trim();
-        if (!title || !desc) {
-            toast('Title and description required', 'err');
-            return;
-        }
-        const tags = (document.getElementById('pj-tags').value || '').split(',').map(t => t.trim()).filter(Boolean);
-        const obj = {
-            title,
-            cat: document.getElementById('pj-cat').value,
-            badge: document.getElementById('pj-badge').value || 'Project',
-            emoji: document.getElementById('pj-emoji').value || '🚀',
-            tags,
-            desc,
-            badgeColor: 'rgba(108,99,255,.2)'
-        };
-        if (editId) {
-            const i = projects.findIndex(x => x.id === editId);
-            if (i > -1) projects[i] = {...projects[i], ...obj};
-            toast('Project updated! ✅', 'ok');
-        } else {
-            obj.id = projects.length ? Math.max(...projects.map(p => p.id)) + 1 : 1;
-            projects.push(obj);
-            toast('Project added! 🚀', 'ok');
-        }
-        saveProjects(projects);
-        renderAdmProjects(document.getElementById('adm-main'), admProjPage);
-        closeOv('post-ov');
-    }
-
-    /* ════ DELETE ════ */
-    function askDelete(id, type) {
-        delId = id;
-        delType = type;
-        document.getElementById('conf-msg').textContent = 'This will permanently remove this project.';
-        document.getElementById('conf-ov').classList.add('open');
-    }
-
     function closeConf() {
         delId = null;
         document.getElementById('conf-ov').classList.remove('open');
     }
 
-    function doDelete() {
-        if (delType === 'project') {
-            projects = projects.filter(p => p.id !== delId);
-            saveProjects(projects);
-            if (document.getElementById('view-admin').style.display !== 'none') admNav('projects');
-        }
-        closeConf();
-        toast('Deleted', 'ok');
-    }
 
-    /* ════ OVERLAYS ════ */
-    function openOv(id) {
-        document.getElementById(id).classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
 
     function closeOv(id) {
         document.getElementById(id).classList.remove('open');
