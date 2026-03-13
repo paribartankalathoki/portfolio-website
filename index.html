@@ -1,150 +1,157 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Paribartan Kalathoki — Full Stack Software Developer | Angular · Java · Spring Boot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap"
-            rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
-
-<body>
+<body class="in-portfolio">
 
 <!-- ═══ MOBILE TOP BAR ═══ -->
-<header class="mob-top" id="mob-top">
-    <div class="mtb-l">
-        <div class="mtb-av">
-            <div class="mtb-av-in">
+<header class="mobile-topbar" id="mobile-topbar">
+    <div class="mobile-topbar-left">
+        <div class="mobile-avatar-ring">
+            <div class="mobile-avatar-inner">
                 <img src="assets/images/paribartankalathoki.png" alt="developer"/>
             </div>
         </div>
         <div>
-            <div class="mtb-n">Paribartan Kalathoki</div>
-            <div class="mtb-r">Full Stack Developer</div>
+            <div class="mobile-topbar-name">Paribartan Kalathoki</div>
+            <div class="mobile-topbar-role">Full Stack Developer</div>
         </div>
     </div>
-    <button class="mob-tog" onclick="toggleTheme()" aria-label="Toggle theme">
-        <div class="mob-tog-th" id="mtog">🌙</div>
+    <button class="mobile-theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <div class="mobile-toggle-thumb" id="mobile-toggle-thumb">🌙</div>
     </button>
 </header>
+
 <!-- Desktop theme toggle -->
-<button id="desk-tog" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle dark/light mode">🌙</button>
+<button id="desktop-theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle dark/light mode">🌙
+</button>
 
 <!-- ════════════════════════════════════════
    PORTFOLIO VIEW
 ════════════════════════════════════════ -->
 <div id="view-portfolio">
-    <div class="page">
+    <div class="page-layout">
+
+        <!-- ── SIDEBAR ── -->
         <aside class="sidebar">
-            <div class="sb-top">
-                <div class="sb-ring">
-                    <div class="sb-ring-in">
+            <div class="sidebar-top">
+                <div class="sidebar-avatar-ring">
+                    <div class="sidebar-avatar-inner">
                         <img src="assets/images/paribartankalathoki.png" alt="developer"/>
                     </div>
                 </div>
-                <div class="sb-name">Paribartan Kalathoki</div>
-                <div class="sb-role">Full Stack Developer</div>
-                <div class="pill"><span class="pill-dot"></span>Open to Work</div>
+                <div class="sidebar-name">Paribartan Kalathoki</div>
+                <div class="sidebar-role">Full Stack Developer</div>
+                <div class="status-pill"><span class="status-dot"></span>Open to Work</div>
             </div>
-            <hr class="sb-hr"/>
-            <nav class="sb-nav" id="sb-nav">
-                <button class="nit active" data-sec="home" onclick="goTo('home')">
-                    <svg fill="none" stroke="currentColor" stroke-width="2"
-                         viewBox="0 0 24 24">
+            <hr class="sidebar-divider"/>
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <button class="nav-item active" data-sec="home" onclick="goTo('home')">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                               d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/>
                     </svg>
-                    <span class="nl">Home</span><span class="nd"></span></button>
-                <button class="nit" data-sec="about" onclick="goTo('about')">
-                    <svg fill="none" stroke="currentColor" stroke-width="2"
-                         viewBox="0 0 24 24">
+                    <span class="nav-item-label">Home</span><span class="nav-item-dot"></span>
+                </button>
+                <button class="nav-item" data-sec="about" onclick="goTo('about')">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                               d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                     </svg>
-                    <span class="nl">About</span><span class="nd"></span></button>
-                <button class="nit" data-sec="skills" onclick="goTo('skills')">
-                    <svg fill="none" stroke="currentColor" stroke-width="2"
-                         viewBox="0 0 24 24">
+                    <span class="nav-item-label">About</span><span class="nav-item-dot"></span>
+                </button>
+                <button class="nav-item" data-sec="skills" onclick="goTo('skills')">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                               d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/>
                     </svg>
-                    <span class="nl">Skills</span><span class="nd"></span></button>
-                <button class="nit" data-sec="projects" onclick="goTo('projects')">
-                    <svg fill="none" stroke="currentColor" stroke-width="2"
-                         viewBox="0 0 24 24">
+                    <span class="nav-item-label">Skills</span><span class="nav-item-dot"></span>
+                </button>
+                <button class="nav-item" data-sec="projects" onclick="goTo('projects')">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                               d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
                     </svg>
-                    <span class="nl">Projects</span><span class="nd"></span></button>
-                <button class="nit" data-sec="contact" onclick="goTo('contact')">
-                    <svg fill="none" stroke="currentColor" stroke-width="2"
-                         viewBox="0 0 24 24">
+                    <span class="nav-item-label">Projects</span><span class="nav-item-dot"></span>
+                </button>
+                <button class="nav-item" data-sec="contact" onclick="goTo('contact')">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                     </svg>
-                    <span class="nl">Contact</span><span class="nd"></span></button>
+                    <span class="nav-item-label">Contact</span><span class="nav-item-dot"></span>
+                </button>
             </nav>
-            <div class="sb-bot">
-                <div class="sb-stats">
-                    <div class="sb-stat">
-                        <div class="sbn">4+</div>
-                        <div class="sbl">Yrs Exp</div>
+            <div class="sidebar-bottom">
+                <div class="row g-2 mb-2">
+                    <div class="col-6">
+                        <div class="sidebar-stat-card">
+                            <div class="sidebar-stat-number">4+</div>
+                            <div class="sidebar-stat-label">Yrs Exp</div>
+                        </div>
                     </div>
-                    <div class="sb-stat">
-                        <div class="sbn">2</div>
-                        <div class="sbl">Companies</div>
+                    <div class="col-6">
+                        <div class="sidebar-stat-card">
+                            <div class="sidebar-stat-number">2</div>
+                            <div class="sidebar-stat-label">Companies</div>
+                        </div>
                     </div>
-                    <div class="sb-stat">
-                        <div class="sbn">3</div>
-                        <div class="sbl">Countries</div>
+                    <div class="col-6">
+                        <div class="sidebar-stat-card">
+                            <div class="sidebar-stat-number">3</div>
+                            <div class="sidebar-stat-label">Countries</div>
+                        </div>
                     </div>
-                    <div class="sb-stat">
-                        <div class="sbn">2</div>
-                        <div class="sbl">Stacks</div>
+                    <div class="col-6">
+                        <div class="sidebar-stat-card">
+                            <div class="sidebar-stat-number">2</div>
+                            <div class="sidebar-stat-label">Stacks</div>
+                        </div>
                     </div>
                 </div>
-                <div class="sb-socs">
-                    <a class="soc" href="https://github.com/paribartankalathoki" target="_blank" title="GitHub">
+                <div class="d-flex gap-2 justify-content-center mt-2">
+                    <a class="social-link" href="https://github.com/paribartankalathoki" target="_blank" title="GitHub">
                         <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                         </svg>
                     </a>
-                    <a class="soc" href="https://www.linkedin.com/in/paribartankalathoki/" target="_blank"
+                    <a class="social-link" href="https://www.linkedin.com/in/paribartankalathoki/" target="_blank"
                        title="LinkedIn">
                         <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                     </a>
                 </div>
             </div>
         </aside>
-        <main class="main" id="main-wrap">
+
+        <!-- ── MAIN CONTENT ── -->
+        <main class="main-content" id="main-content">
+
             <!-- HOME -->
             <section id="home">
-                <div class="hero-wrap">
-                    <!--                    <div class="h-badge fi"><span class="h-bdot"></span>Available for new projects</div>-->
-                    <h1 class="h-name fi" style="transition-delay:.07s">Hi, I'm<br/><span
-                            class="grad">Paribartan Kalathoki</span></h1>
-                    <div class="h-role fi" style="transition-delay:.13s"><span
-                            id="typed-txt">Full Stack Developer</span><span
-                            class="cursor"></span></div>
-                    <p class="h-desc fi" style="transition-delay:.19s">I build enterprise-grade web applications —
-                        Angular &amp; Svelte frontends, Java Spring Boot backends, and seamless RESTful &amp; GraphQL
-                        integrations for insurance and fintech clients.</p>
-                    <div class="h-btns fi" style="transition-delay:.24s">
-                        <button class="btn btn-p" onclick="goTo('projects')">View My Work →</button>
-                        <button class="btn btn-g" onclick="goTo('contact')">Let's Talk</button>
-
+                <div class="hero-content">
+                    <h1 class="hero-name animate-on-scroll" style="transition-delay:.07s">Hi, I'm<br/><span
+                            class="gradient-text">Paribartan Kalathoki</span></h1>
+                    <div class="hero-role animate-on-scroll" style="transition-delay:.13s">
+                        <span id="typed-txt">Full Stack Developer</span><span class="typing-cursor"></span>
+                    </div>
+                    <p class="hero-description animate-on-scroll" style="transition-delay:.19s">I build enterprise-grade
+                        web applications — Angular &amp; Svelte frontends, Java Spring Boot backends, and seamless
+                        RESTful &amp; GraphQL integrations for insurance and fintech clients.</p>
+                    <div class="hero-buttons animate-on-scroll" style="transition-delay:.24s">
+                        <button class="btn-accent" onclick="goTo('projects')">View My Work →</button>
+                        <button class="btn-ghost" onclick="goTo('contact')">Let's Talk</button>
                         <a href="https://drive.google.com/file/d/1qSBhC4J_Aaqg9dF6xdNX06DwgdTMvhX8/view?usp=drive_link"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-g">
+                           target="_blank" rel="noopener noreferrer" class="btn-ghost">
                             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
                                  viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -153,65 +160,79 @@
                             Resume
                         </a>
                     </div>
-                    <div class="h-stats fi" style="transition-delay:.29s">
+                    <div class="hero-stats animate-on-scroll" style="transition-delay:.29s">
                         <div>
-                            <div class="stat-n">4+</div>
-                            <div class="stat-l">Years Experience</div>
+                            <div class="hero-stat-number">4+</div>
+                            <div class="hero-stat-label">Years Experience</div>
                         </div>
                         <div>
-                            <div class="stat-n">2</div>
-                            <div class="stat-l">Companies</div>
+                            <div class="hero-stat-number">2</div>
+                            <div class="hero-stat-label">Companies</div>
                         </div>
                         <div>
-                            <div class="stat-n">3</div>
-                            <div class="stat-l">Countries</div>
+                            <div class="hero-stat-number">3</div>
+                            <div class="hero-stat-label">Countries</div>
                         </div>
                         <div>
-                            <div class="stat-n">2</div>
-                            <div class="stat-l">Tech Stacks</div>
+                            <div class="hero-stat-number">2</div>
+                            <div class="hero-stat-label">Tech Stacks</div>
                         </div>
                     </div>
-                    <div class="h-techs fi" style="transition-delay:.34s"><span class="tpill">Angular</span><span
-                            class="tpill">TypeScript</span><span class="tpill">Java</span><span class="tpill">Spring Boot</span><span
-                            class="tpill">Svelte</span><span class="tpill">Ionic</span><span
-                            class="tpill">GraphQL</span><span class="tpill">REST APIs</span><span
-                            class="tpill">Git</span></div>
-                    <div class="svc-grid fi" style="transition-delay:.38s">
-                        <div class="svc-card" style="--svc-accent:linear-gradient(90deg,#dd0031,#c3002f)">
-                            <div class="svc-ico-wrap"
-                                 style="background:rgba(221,0,49,.12);border-color:rgba(221,0,49,.25)">⚡
+                    <div class="hero-tech-stack animate-on-scroll" style="transition-delay:.34s">
+                        <span class="tech-pill">Angular</span>
+                        <span class="tech-pill">TypeScript</span>
+                        <span class="tech-pill">Java</span>
+                        <span class="tech-pill">Spring Boot</span>
+                        <span class="tech-pill">Svelte</span>
+                        <span class="tech-pill">Ionic</span>
+                        <span class="tech-pill">GraphQL</span>
+                        <span class="tech-pill">REST APIs</span>
+                        <span class="tech-pill">Git</span>
+                    </div>
+                    <div class="row g-3 mt-1 animate-on-scroll" style="transition-delay:.38s">
+                        <div class="col-6 col-md-3">
+                            <div class="service-card" style="--svc-accent:linear-gradient(90deg,#dd0031,#c3002f)">
+                                <div class="service-icon-wrap"
+                                     style="background:rgba(221,0,49,.12);border-color:rgba(221,0,49,.25)">⚡
+                                </div>
+                                <div class="service-title">Frontend Dev</div>
+                                <div class="service-description">Angular &amp; Svelte — complex enterprise portals</div>
+                                <span class="service-tag"
+                                      style="color:#f87171;border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.08)">Angular · TypeScript</span>
                             </div>
-                            <div class="svc-t">Frontend Dev</div>
-                            <div class="svc-d">Angular &amp; Svelte — complex enterprise portals</div>
-                            <span class="svc-tag"
-                                  style="color:#f87171;border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.08)">Angular · TypeScript</span>
                         </div>
-                        <div class="svc-card" style="--svc-accent:linear-gradient(90deg,#f472b6,#db2777)">
-                            <div class="svc-ico-wrap"
-                                 style="background:rgba(244,114,182,.1);border-color:rgba(244,114,182,.25)">🔗
+                        <div class="col-6 col-md-3">
+                            <div class="service-card" style="--svc-accent:linear-gradient(90deg,#f472b6,#db2777)">
+                                <div class="service-icon-wrap"
+                                     style="background:rgba(244,114,182,.1);border-color:rgba(244,114,182,.25)">🔗
+                                </div>
+                                <div class="service-title">API Integration</div>
+                                <div class="service-description">RESTful &amp; GraphQL — insurance &amp; fintech</div>
+                                <span class="service-tag"
+                                      style="color:#f472b6;border-color:rgba(244,114,182,.3);background:rgba(244,114,182,.08)">REST · GraphQL</span>
                             </div>
-                            <div class="svc-t">API Integration</div>
-                            <div class="svc-d">RESTful &amp; GraphQL — insurance &amp; fintech</div>
-                            <span class="svc-tag"
-                                  style="color:#f472b6;border-color:rgba(244,114,182,.3);background:rgba(244,114,182,.08)">REST · GraphQL</span>
                         </div>
-                        <div class="svc-card" style="--svc-accent:linear-gradient(90deg,#10d9a0,#059669)">
-                            <div class="svc-ico-wrap"
-                                 style="background:rgba(16,217,160,.1);border-color:rgba(16,217,160,.25)">🔧
+                        <div class="col-6 col-md-3">
+                            <div class="service-card" style="--svc-accent:linear-gradient(90deg,#10d9a0,#059669)">
+                                <div class="service-icon-wrap"
+                                     style="background:rgba(16,217,160,.1);border-color:rgba(16,217,160,.25)">🔧
+                                </div>
+                                <div class="service-title">Backend Dev</div>
+                                <div class="service-description">Java Spring Boot — REST &amp; GraphQL APIs</div>
+                                <span class="service-tag"
+                                      style="color:#4ade80;border-color:rgba(74,222,128,.3);background:rgba(74,222,128,.08)">Java · Spring Boot</span>
                             </div>
-                            <div class="svc-t">Backend Dev</div>
-                            <div class="svc-d">Java Spring Boot — REST &amp; GraphQL APIs</div>
-                            <span class="svc-tag"
-                                  style="color:#4ade80;border-color:rgba(74,222,128,.3);background:rgba(74,222,128,.08)">Java · Spring Boot</span>
                         </div>
-                        <div class="svc-card" style="--svc-accent:linear-gradient(90deg,#38bdf8,#0284c7)">
-                            <div class="svc-ico-wrap"
-                                 style="background:rgba(56,189,248,.1);border-color:rgba(56,189,248,.25)">📱
+                        <div class="col-6 col-md-3">
+                            <div class="service-card" style="--svc-accent:linear-gradient(90deg,#38bdf8,#0284c7)">
+                                <div class="service-icon-wrap"
+                                     style="background:rgba(56,189,248,.1);border-color:rgba(56,189,248,.25)">📱
+                                </div>
+                                <div class="service-title">Mobile Dev</div>
+                                <div class="service-description">Ionic cross-platform mobile applications</div>
+                                <span class="service-tag"
+                                      style="color:#38bdf8;border-color:rgba(56,189,248,.3);background:rgba(56,189,248,.08)">Ionic · Angular</span>
                             </div>
-                            <div class="svc-t">Mobile Dev</div>
-                            <div class="svc-d">Ionic cross-platform mobile applications</div>
-                            <span class="svc-tag"
-                                  style="color:#38bdf8;border-color:rgba(56,189,248,.3);background:rgba(56,189,248,.08)">Ionic · Angular</span>
                         </div>
                     </div>
                 </div>
@@ -219,16 +240,18 @@
 
             <!-- ABOUT -->
             <section id="about">
-                <div class="eyebrow fi">About Me</div>
-                <h2 class="sec-title fi" style="transition-delay:.05s">4 Years. 3 Countries. Always Shipping.</h2>
-                <div class="sec-bar fi" style="transition-delay:.09s"></div>
-                <p class="sec-sub fi" style="transition-delay:.11s">Full-Stack Developer &amp; MSc student in the UK
-                    with 4+ years in Angular, Java, and Spring Boot — seeking a part-time role.</p>
+                <div class="section-eyebrow animate-on-scroll">About Me</div>
+                <h2 class="section-title animate-on-scroll" style="transition-delay:.05s">4 Years. 3 Countries. Always
+                    Shipping.</h2>
+                <div class="section-accent-bar animate-on-scroll" style="transition-delay:.09s"></div>
+                <p class="section-subtitle animate-on-scroll" style="transition-delay:.11s">Full-Stack Developer &amp;
+                    MSc student in the UK with 4+ years in Angular, Java, and Spring Boot — seeking a part-time
+                    role.</p>
 
                 <!-- Bio + Info -->
-                <div class="about-bio-row fi" style="transition-delay:.13s">
-                    <div>
-                        <div class="bio">
+                <div class="row g-4 animate-on-scroll" style="transition-delay:.13s">
+                    <div class="col-12 col-lg-7">
+                        <div class="about-bio-text">
                             <p>I'm based in London, United Kingdom, currently completing my MSc while working in
                                 frontend engineering. Over the last 4 years I've built and shipped production-grade
                                 applications for insurance portals and fintech platforms serving clients across
@@ -241,117 +264,128 @@
                                 code, build for maintainability, and treat every API contract as seriously as a product
                                 spec.</p>
                         </div>
-                        <div class="xp-summary">
-                            <div class="xp-card">
-                                <div class="xp-num">4+</div>
-                                <div class="xp-lbl">Years experience</div>
+                        <div class="row g-2 mt-2">
+                            <div class="col-6 col-sm-3">
+                                <div class="experience-stat-card">
+                                    <div class="experience-number">4+</div>
+                                    <div class="experience-label">Years experience</div>
+                                </div>
                             </div>
-                            <div class="xp-card">
-                                <div class="xp-num">2</div>
-                                <div class="xp-lbl">Companies</div>
+                            <div class="col-6 col-sm-3">
+                                <div class="experience-stat-card">
+                                    <div class="experience-number">2</div>
+                                    <div class="experience-label">Companies</div>
+                                </div>
                             </div>
-                            <div class="xp-card">
-                                <div class="xp-num">3</div>
-                                <div class="xp-lbl">Countries worked</div>
+                            <div class="col-6 col-sm-3">
+                                <div class="experience-stat-card">
+                                    <div class="experience-number">3</div>
+                                    <div class="experience-label">Countries worked</div>
+                                </div>
                             </div>
-                            <div class="xp-card">
-                                <div class="xp-num">2</div>
-                                <div class="xp-lbl">Tech stacks</div>
+                            <div class="col-6 col-sm-3">
+                                <div class="experience-stat-card">
+                                    <div class="experience-number">2</div>
+                                    <div class="experience-label">Tech stacks</div>
+                                </div>
                             </div>
                         </div>
-                        <div style="margin-top:1.3rem">
-                            <div
-                                    style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--accent3);text-transform:uppercase;letter-spacing:.15em;margin-bottom:.65rem">
+                        <div class="mt-3">
+                            <div style="font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--accent3);text-transform:uppercase;letter-spacing:.15em;margin-bottom:.65rem">
                                 Core Strengths
                             </div>
-                            <div class="chips">
-                              <span class="chip"
-                                    style="background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.3);color:var(--green)">Angular</span>
-                                <span class="chip"
+                            <div class="strength-chips">
+                                <span class="strength-chip"
+                                      style="background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.3);color:var(--green)">Angular</span>
+                                <span class="strength-chip"
                                       style="background:rgba(16,217,160,.1);border:1px solid rgba(16,217,160,.3);color:var(--green)">TypeScript</span>
-                                <span class="chip"
+                                <span class="strength-chip"
                                       style="background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.3);color:var(--accent3)">API Integration</span>
-                                <span class="chip"
+                                <span class="strength-chip"
                                       style="background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.3);color:var(--accent)">Apollo Client</span>
-                                <span class="chip"
+                                <span class="strength-chip"
                                       style="background:rgba(16,217,160,.1);border:1px solid rgba(16,217,160,.3);color:var(--accent)">Spring Boot</span>
-                                <span class="chip"
+                                <span class="strength-chip"
                                       style="background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.3);color:var(--orange)">Client Support</span>
-                                <span class="chip"
+                                <span class="strength-chip"
                                       style="background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.3);color:var(--orange)">Svelte</span>
-                                <span class="chip"
+                                <span class="strength-chip"
                                       style="background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.3);color:var(--accent3)">Fin Tech</span>
                             </div>
                         </div>
                     </div>
-                    <div class="info-g">
-                        <div class="ic"><span class="ic-ico">📍</span>
-                            <div>
-                                <div class="ic-lv">Location</div>
-                                <div class="ic-v">London, United Kingdom</div>
+                    <div class="col-12 col-lg-5">
+                        <div class="d-flex flex-column gap-2">
+                            <div class="info-card"><span class="info-card-icon">📍</span>
+                                <div>
+                                    <div class="info-card-label">Location</div>
+                                    <div class="info-card-value">London, United Kingdom</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="ic"><span class="ic-ico">💼</span>
-                            <div>
-                                <div class="ic-lv">Current Role</div>
-                                <div class="ic-v">Frontend Developer</div>
+                            <div class="info-card"><span class="info-card-icon">💼</span>
+                                <div>
+                                    <div class="info-card-label">Current Role</div>
+                                    <div class="info-card-value">Frontend Developer</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="ic"><span class="ic-ico">🎓</span>
-                            <div>
-                                <div class="ic-lv">Degree</div>
-                                <div class="ic-v">BSc. Information Technology (Hons)</div>
+                            <div class="info-card"><span class="info-card-icon">🎓</span>
+                                <div>
+                                    <div class="info-card-label">Degree</div>
+                                    <div class="info-card-value">BSc. Information Technology (Hons)</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="ic"><span class="ic-ico">🏫</span>
-                            <div>
-                                <div class="ic-lv">University</div>
-                                <div class="ic-v">Lincoln University College, Malaysia</div>
+                            <div class="info-card"><span class="info-card-icon">🏫</span>
+                                <div>
+                                    <div class="info-card-label">University</div>
+                                    <div class="info-card-value">Lincoln University College, Malaysia</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="ic"><span class="ic-ico">🌐</span>
-                            <div>
-                                <div class="ic-lv">Focus</div>
-                                <div class="ic-v">Angular · Java · Spring Boot</div>
+                            <div class="info-card"><span class="info-card-icon">🌐</span>
+                                <div>
+                                    <div class="info-card-label">Focus</div>
+                                    <div class="info-card-value">Angular · Java · Spring Boot</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="ic"><span class="ic-ico">🟢</span>
-                            <div>
-                                <div class="ic-lv">Status</div>
-                                <div class="ic-v" style="color:var(--green)">Open · Part-time roles</div>
+                            <div class="info-card"><span class="info-card-icon">🟢</span>
+                                <div>
+                                    <div class="info-card-label">Status</div>
+                                    <div class="info-card-value" style="color:var(--green)">Open · Part-time roles</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="ic"><span class="ic-ico">📧</span>
-                            <div>
-                                <div class="ic-lv">Email</div>
-                                <div class="ic-v" style="color:var(--accent3)"><a
-                                        href="mailto:paribartankalathoki@gmail.com" style="color:inherit"><span
-                                        class="__cf_email__">[email&#160;protected]</span></a></div>
+                            <div class="info-card"><span class="info-card-icon">📧</span>
+                                <div>
+                                    <div class="info-card-label">Email</div>
+                                    <div class="info-card-value" style="color:var(--accent3)">
+                                        <!-- Email address is assembled in JS — never exposed in HTML source -->
+                                        <a href="#" class="protected-email-link" id="about-email-link">[email&#160;protected]</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Career Timeline — full width -->
-                <div class="career-section fi" style="transition-delay:.17s">
-                    <div class="section-label">Career Journey</div>
-                    <div class="tl-wrap">
-                        <div class="tl-spine"></div>
-                        <div class="tl-item">
-                            <div class="tl-dot-wrap">
-                                <div class="tl-dot"
+                <!-- Career Timeline -->
+                <div class="career-timeline-section animate-on-scroll mt-5" style="transition-delay:.17s">
+                    <div class="timeline-section-label">Career Journey</div>
+                    <div class="timeline-wrapper">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot-wrapper">
+                                <div class="timeline-dot"
                                      style="background:var(--orange);box-shadow:0 0 0 3px rgba(251,146,60,.2)"></div>
                             </div>
-                            <div class="tl-card">
-                                <div class="tl-head">
-                                    <div class="tl-role">MSc. in Technology Management with Cybersecurity · Student
+                            <div class="timeline-card">
+                                <div class="timeline-card-header">
+                                    <div class="timeline-role-title">MSc. in Technology Management with Cybersecurity ·
+                                        Student
                                     </div>
-                                    <span class="tl-date-badge">2026 — Present</span>
+                                    <span class="timeline-date-badge">2026 — Present</span>
                                 </div>
-                                <div class="tl-co">🎓 BPP University · United Kingdom</div>
-                                <div class="tl-desc">
+                                <div class="timeline-company">🎓 BPP University · United Kingdom</div>
+                                <div class="timeline-description">
                                     <ul>
-                                        <li>Currently, pursuing MSc. in Technology Management with Cybersecurity in the
+                                        <li>Currently pursuing MSc. in Technology Management with Cybersecurity in the
                                             United Kingdom.
                                         </li>
                                         <li>Continuously developing software engineering skills using Angular, Java, and
@@ -364,18 +398,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tl-item">
-                            <div class="tl-dot-wrap">
-                                <div class="tl-dot"
+                        <div class="timeline-item">
+                            <div class="timeline-dot-wrapper">
+                                <div class="timeline-dot"
                                      style="background:var(--accent);box-shadow:0 0 0 3px rgba(108,99,255,.25)"></div>
                             </div>
-                            <div class="tl-card">
-                                <div class="tl-head">
-                                    <div class="tl-role">Frontend Developer</div>
-                                    <span class="tl-date-badge">May 2024 — Jul 2025</span>
+                            <div class="timeline-card">
+                                <div class="timeline-card-header">
+                                    <div class="timeline-role-title">Frontend Developer</div>
+                                    <span class="timeline-date-badge">May 2024 — Jul 2025</span>
                                 </div>
-                                <div class="tl-co">🏢 SenangNvs Sdn. Bhd · Malaysia · Full-time</div>
-                                <div class="tl-desc">
+                                <div class="timeline-company">🏢 SenangNvs Sdn. Bhd · Malaysia · Full-time</div>
+                                <div class="timeline-description">
                                     <ul>
                                         <li>Angular developer specialising in complex insurance portals for clients in
                                             Malaysia and the Philippines.
@@ -391,18 +425,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tl-item">
-                            <div class="tl-dot-wrap">
-                                <div class="tl-dot"
+                        <div class="timeline-item">
+                            <div class="timeline-dot-wrapper">
+                                <div class="timeline-dot"
                                      style="background:var(--green);box-shadow:0 0 0 3px rgba(16,217,160,.2)"></div>
                             </div>
-                            <div class="tl-card">
-                                <div class="tl-head">
-                                    <div class="tl-role">Full Stack Software Developer</div>
-                                    <span class="tl-date-badge">Mar 2021 — Apr 2024</span>
+                            <div class="timeline-card">
+                                <div class="timeline-card-header">
+                                    <div class="timeline-role-title">Full Stack Software Developer</div>
+                                    <span class="timeline-date-badge">Mar 2021 — Apr 2024</span>
                                 </div>
-                                <div class="tl-co">🚀 S.B Solutions Pvt. Ltd · Nepal · Full-time</div>
-                                <div class="tl-desc">
+                                <div class="timeline-company">🚀 S.B Solutions Pvt. Ltd · Nepal · Full-time</div>
+                                <div class="timeline-description">
                                     <ul>
                                         <li>Full Stack Developer with a focus on fintech, leading the frontend
                                             development team.
@@ -419,19 +453,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tl-item">
-                            <div class="tl-dot-wrap">
-                                <div class="tl-dot"
+                        <div class="timeline-item">
+                            <div class="timeline-dot-wrapper">
+                                <div class="timeline-dot"
                                      style="background:var(--pink);box-shadow:0 0 0 3px rgba(244,114,182,.2)"></div>
                             </div>
-                            <div class="tl-card">
-                                <div class="tl-head">
-                                    <div class="tl-role">BSc. Information Technology (Hons)</div>
-                                    <span class="tl-date-badge">Nov 2017 — Jun 2021</span>
+                            <div class="timeline-card">
+                                <div class="timeline-card-header">
+                                    <div class="timeline-role-title">BSc. Information Technology (Hons)</div>
+                                    <span class="timeline-date-badge">Nov 2017 — Jun 2021</span>
                                 </div>
-                                <div class="tl-co">🎓 Lincoln University College · Kathmandu, Nepal</div>
-                                <div class="tl-desc">
-                                    <p class="tl-role">Main coursework: </p>
+                                <div class="timeline-company">🎓 Lincoln University College · Kathmandu, Nepal</div>
+                                <div class="timeline-description">
+                                    <p class="timeline-role-title" style="font-size:.8rem;margin-bottom:.3rem">Main
+                                        coursework:</p>
                                     <ul>
                                         <li>Java</li>
                                         <li>Data Structures</li>
@@ -448,53 +483,59 @@
                     </div>
                 </div>
 
-                <!-- Education — horizontal cards -->
-                <div class="fi" style="transition-delay:.22s">
-                    <div class="section-label">Education &amp; Certifications</div>
-                    <div class="edu-row">
-                        <div class="edu-card" style="--edu-accent:var(--orange)">
-                            <div class="edu-ico-wrap"
-                                 style="background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.25)">🎓
-                            </div>
-                            <div class="edu-deg">MSc. Technology Management with Cybersecurity</div>
-                            <div class="edu-inst">🏛️ BPP University · United Kingdom</div>
-                            <div class="edu-meta">
-                                <span class="edu-tag">2026 – Present</span>
-                                <span class="edu-tag"
-                                      style="color:var(--orange);border-color:rgba(251,146,60,.3);background:rgba(251,146,60,.08)">In Progress</span>
-                            </div>
-                            <div class="edu-desc">Postgraduate study in the UK alongside active part-time software
-                                engineering work.
-                            </div>
-                        </div>
-                        <div class="edu-card" style="--edu-accent:var(--accent)">
-                            <div class="edu-ico-wrap"
-                                 style="background:rgba(108,99,255,.1);border-color:rgba(108,99,255,.25)">🎓
-                            </div>
-                            <div class="edu-deg">BSc. Information Technology (Hons)</div>
-                            <div class="edu-inst">🏛️ Lincoln University College · Nepal</div>
-                            <div class="edu-meta">
-                                <span class="edu-tag">2017 – 2021</span>
-                                <span class="edu-tag"
-                                      style="color:var(--green);border-color:rgba(16,217,160,.3);background:rgba(16,217,160,.08)">Completed</span>
-                            </div>
-                            <div class="edu-desc">Java, Data Structures, Algorithms, Software Engineering, AI, Database
-                                Systems, Operating Systems.
+                <!-- Education Cards -->
+                <div class="animate-on-scroll mt-4" style="transition-delay:.22s">
+                    <div class="timeline-section-label">Education &amp; Certifications</div>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-4">
+                            <div class="education-card" style="--edu-accent:var(--orange)">
+                                <div class="education-icon-wrap"
+                                     style="background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.25)">🎓
+                                </div>
+                                <div class="education-degree">MSc. Technology Management with Cybersecurity</div>
+                                <div class="education-institution">🏛️ BPP University · United Kingdom</div>
+                                <div class="education-meta">
+                                    <span class="education-tag">2026 – Present</span>
+                                    <span class="education-tag"
+                                          style="color:var(--orange);border-color:rgba(251,146,60,.3);background:rgba(251,146,60,.08)">In Progress</span>
+                                </div>
+                                <div class="education-description">Postgraduate study in the UK alongside active
+                                    part-time software engineering work.
+                                </div>
                             </div>
                         </div>
-                        <div class="edu-card" style="--edu-accent:var(--green)">
-                            <div class="edu-ico-wrap"
-                                 style="background:rgba(16,217,160,.1);border-color:rgba(16,217,160,.25)">🌍
+                        <div class="col-12 col-md-4">
+                            <div class="education-card" style="--edu-accent:var(--accent)">
+                                <div class="education-icon-wrap"
+                                     style="background:rgba(108,99,255,.1);border-color:rgba(108,99,255,.25)">🎓
+                                </div>
+                                <div class="education-degree">BSc. Information Technology (Hons)</div>
+                                <div class="education-institution">🏛️ Lincoln University College · Nepal</div>
+                                <div class="education-meta">
+                                    <span class="education-tag">2017 – 2021</span>
+                                    <span class="education-tag"
+                                          style="color:var(--green);border-color:rgba(16,217,160,.3);background:rgba(16,217,160,.08)">Completed</span>
+                                </div>
+                                <div class="education-description">Java, Data Structures, Algorithms, Software
+                                    Engineering, AI, Database Systems, Operating Systems.
+                                </div>
                             </div>
-                            <div class="edu-deg">International Experience</div>
-                            <div class="edu-inst">🗺️ Nepal · Malaysia · United Kingdom</div>
-                            <div class="edu-meta">
-                                <span class="edu-tag">2021 – Present</span>
-                                <span class="edu-tag"
-                                      style="color:var(--accent3);border-color:rgba(108,99,255,.3);background:rgba(108,99,255,.08)">3 Countries</span>
-                            </div>
-                            <div class="edu-desc">Production software delivered across fintech in Nepal, insurance
-                                portals in Malaysia, and now the UK.
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="education-card" style="--edu-accent:var(--green)">
+                                <div class="education-icon-wrap"
+                                     style="background:rgba(16,217,160,.1);border-color:rgba(16,217,160,.25)">🌍
+                                </div>
+                                <div class="education-degree">International Experience</div>
+                                <div class="education-institution">🗺️ Nepal · Malaysia · United Kingdom</div>
+                                <div class="education-meta">
+                                    <span class="education-tag">2021 – Present</span>
+                                    <span class="education-tag"
+                                          style="color:var(--accent3);border-color:rgba(108,99,255,.3);background:rgba(108,99,255,.08)">3 Countries</span>
+                                </div>
+                                <div class="education-description">Production software delivered across fintech in
+                                    Nepal, insurance portals in Malaysia, and now the UK.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -503,252 +544,283 @@
 
             <!-- SKILLS -->
             <section id="skills">
-                <div class="eyebrow fi">Tech Stack</div>
-                <h2 class="sec-title fi" style="transition-delay:.05s">Skills & Technologies</h2>
-                <div class="sec-bar fi" style="transition-delay:.09s"></div>
-                <p class="sec-sub fi" style="transition-delay:.12s">Built and honed over 4 years of real-world
-                    engineering —
-                    not just tutorials.</p>
-                <div class="skills-top">
-                    <!-- LEFT: Core skill cards -->
-                    <div class="fi" style="transition-delay:.16s">
-                        <div class="grp-lbl">Core Skills</div>
-                        <div class="skill-cards">
-                            <div class="sk-card">
-                                <div class="sk-ico">🅰️</div>
-                                <div class="sk-info">
+                <div class="section-eyebrow animate-on-scroll">Tech Stack</div>
+                <h2 class="section-title animate-on-scroll" style="transition-delay:.05s">Skills &amp; Technologies</h2>
+                <div class="section-accent-bar animate-on-scroll" style="transition-delay:.09s"></div>
+                <p class="section-subtitle animate-on-scroll" style="transition-delay:.12s">Built and honed over 4 years
+                    of real-world engineering — not just tutorials.</p>
+                <div class="row g-4">
+                    <!-- Core Skill Cards -->
+                    <div class="col-12 col-lg-5 animate-on-scroll" style="transition-delay:.16s">
+                        <div class="group-label">Core Skills</div>
+                        <div class="skill-card-list">
+                            <div class="skill-card" style="--sk-accent:#dd0031">
+                                <div class="skill-icon"
+                                     style="background:rgba(221,0,49,.12);border-color:rgba(221,0,49,.25);color:#f87171">
+                                    🅰️
+                                </div>
+                                <div class="skill-info">
                                     <div>
-                                        <div class="sk-name">Angular</div>
-                                        <div class="sk-sub">4 yrs · Insurance &amp; Fintech portals</div>
+                                        <div class="skill-name">Angular</div>
+                                        <div class="skill-subtitle">4 yrs · Insurance &amp; Fintech portals</div>
                                     </div>
-                                    <span class="sk-tag sk-tag-exp">Expert</span>
+                                    <span class="skill-level-badge skill-level-badge--expert">Expert</span>
                                 </div>
                             </div>
-                            <div class="sk-card">
-                                <div class="sk-ico">🔷</div>
-                                <div class="sk-info">
+                            <div class="skill-card" style="--sk-accent:#3b82f6">
+                                <div class="skill-icon"
+                                     style="background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.25);color:#60a5fa">
+                                    🔷
+                                </div>
+                                <div class="skill-info">
                                     <div>
-                                        <div class="sk-name">TypeScript</div>
-                                        <div class="sk-sub">4 yrs · Type-safe enterprise apps</div>
+                                        <div class="skill-name">TypeScript</div>
+                                        <div class="skill-subtitle">4 yrs · Type-safe enterprise apps</div>
                                     </div>
-                                    <span class="sk-tag sk-tag-exp">Expert</span>
+                                    <span class="skill-level-badge skill-level-badge--expert">Expert</span>
                                 </div>
                             </div>
-                            <div class="sk-card">
-                                <div class="sk-ico">☕</div>
-                                <div class="sk-info">
+                            <div class="skill-card" style="--sk-accent:#f59e0b">
+                                <div class="skill-icon"
+                                     style="background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.25);color:#fbbf24">
+                                    ☕
+                                </div>
+                                <div class="skill-info">
                                     <div>
-                                        <div class="sk-name">Java</div>
-                                        <div class="sk-sub">4 yrs · Fintech &amp; banking backends</div>
+                                        <div class="skill-name">Java</div>
+                                        <div class="skill-subtitle">4 yrs · Fintech &amp; banking backends</div>
                                     </div>
-                                    <span class="sk-tag sk-tag-exp">Expert</span>
+                                    <span class="skill-level-badge skill-level-badge--expert">Expert</span>
                                 </div>
                             </div>
-                            <div class="sk-card">
-                                <div class="sk-ico">🌿</div>
-                                <div class="sk-info">
+                            <div class="skill-card" style="--sk-accent:#10d9a0">
+                                <div class="skill-icon"
+                                     style="background:rgba(16,217,160,.12);border-color:rgba(16,217,160,.25);color:#10d9a0">
+                                    🌿
+                                </div>
+                                <div class="skill-info">
                                     <div>
-                                        <div class="sk-name">Spring Boot</div>
-                                        <div class="sk-sub">4 yrs · REST APIs &amp; microservices</div>
+                                        <div class="skill-name">Spring Boot</div>
+                                        <div class="skill-subtitle">4 yrs · REST APIs &amp; microservices</div>
                                     </div>
-                                    <span class="sk-tag sk-tag-prof">Advanced</span>
+                                    <span class="skill-level-badge skill-level-badge--advanced">Advanced</span>
                                 </div>
                             </div>
-                            <div class="sk-card">
-                                <div class="sk-ico">🔄</div>
-                                <div class="sk-info">
+                            <div class="skill-card" style="--sk-accent:#f472b6">
+                                <div class="skill-icon"
+                                     style="background:rgba(244,114,182,.12);border-color:rgba(244,114,182,.25);color:#f472b6">
+                                    🔄
+                                </div>
+                                <div class="skill-info">
                                     <div>
-                                        <div class="sk-name">REST &amp; GraphQL APIs</div>
-                                        <div class="sk-sub">4 yrs · Apollo Client, integration</div>
+                                        <div class="skill-name">REST &amp; GraphQL APIs</div>
+                                        <div class="skill-subtitle">4 yrs · Apollo Client, integration</div>
                                     </div>
-                                    <span class="sk-tag sk-tag-exp">Expert</span>
+                                    <span class="skill-level-badge skill-level-badge--expert">Expert</span>
                                 </div>
                             </div>
-                            <div class="sk-card">
-                                <div class="sk-ico">🌟</div>
-                                <div class="sk-info">
+                            <div class="skill-card" style="--sk-accent:#fb923c">
+                                <div class="skill-icon"
+                                     style="background:rgba(251,146,60,.12);border-color:rgba(251,146,60,.25);color:#fb923c">
+                                    🌟
+                                </div>
+                                <div class="skill-info">
                                     <div>
-                                        <div class="sk-name">Svelte</div>
-                                        <div class="sk-sub">2 yrs · UI/UX component redesigns</div>
+                                        <div class="skill-name">Svelte</div>
+                                        <div class="skill-subtitle">2 yrs · UI/UX component redesigns</div>
                                     </div>
-                                    <span class="sk-tag sk-tag-prof">Advanced</span>
+                                    <span class="skill-level-badge skill-level-badge--advanced">Advanced</span>
                                 </div>
                             </div>
-                            <div class="sk-card">
-                                <div class="sk-ico">📱</div>
-                                <div class="sk-info">
+                            <div class="skill-card" style="--sk-accent:#38bdf8">
+                                <div class="skill-icon"
+                                     style="background:rgba(56,189,248,.12);border-color:rgba(56,189,248,.25);color:#38bdf8">
+                                    📱
+                                </div>
+                                <div class="skill-info">
                                     <div>
-                                        <div class="sk-name">Ionic</div>
-                                        <div class="sk-sub">1 yr · Cross-platform mobile apps</div>
+                                        <div class="skill-name">Ionic</div>
+                                        <div class="skill-subtitle">1 yr · Cross-platform mobile apps</div>
                                     </div>
-                                    <span class="sk-tag sk-tag-fam">Familiar</span>
+                                    <span class="skill-level-badge skill-level-badge--familiar">Familiar</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- RIGHT: Tools & Ecosystem pills -->
-                    <div class="fi" style="transition-delay:.22s">
-                        <div class="grp-lbl">Tools &amp; Ecosystem</div>
-                        <div class="tech-cats">
+                    <!-- Tools & Ecosystem -->
+                    <div class="col-12 col-lg-7 animate-on-scroll" style="transition-delay:.22s">
+                        <div class="group-label">Tools &amp; Ecosystem</div>
+                        <div class="tech-categories">
                             <div>
-                                <div class="tc-label">Frontend</div>
-                                <div class="tc-pills">
-                                    <span class="tc-pill"
+                                <div class="tech-category-label">Frontend</div>
+                                <div class="tech-category-pills">
+                                    <span class="tech-category-pill"
                                           style="background:rgba(221,0,49,.1);border-color:rgba(221,0,49,.3);color:#f87171">🅰️ Angular</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(255,62,0,.1);border-color:rgba(255,62,0,.3);color:#fb923c">🌟 Svelte</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.3);color:#60a5fa">🔷 TypeScript</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(247,220,111,.1);border-color:rgba(247,220,111,.3);color:#fbbf24">🌐 JavaScript</span>
                                 </div>
                             </div>
                             <div>
-                                <div class="tc-label">Backend</div>
-                                <div class="tc-pills">
-                                    <span class="tc-pill"
+                                <div class="tech-category-label">Backend</div>
+                                <div class="tech-category-pills">
+                                    <span class="tech-category-pill"
                                           style="background:rgba(248,113,113,.1);border-color:rgba(248,113,113,.3);color:#f87171">☕ Java</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#4ade80">🌿 Spring Boot</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(229,53,171,.1);border-color:rgba(229,53,171,.3);color:#f472b6">🔄 GraphQL</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.3);color:var(--orange)">🔗 REST APIs</span>
                                 </div>
                             </div>
                             <div>
-                                <div class="tc-label">Database &amp; ORM</div>
-                                <div class="tc-pills">
-                                    <span class="tc-pill"
+                                <div class="tech-category-label">Database &amp; ORM</div>
+                                <div class="tech-category-pills">
+                                    <span class="tech-category-pill"
                                           style="background:rgba(30,113,197,.1);border-color:rgba(30,113,197,.3);color:#60a5fa">🐘 PostgreSQL</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(0,156,179,.1);border-color:rgba(0,156,179,.3);color:#38bdf8">🐬 MySQL</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(108,99,255,.1);border-color:rgba(108,99,255,.3);color:#818cf8">🔁 JPA / Hibernate</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(16,217,160,.1);border-color:rgba(16,217,160,.3);color:#10d9a0">💡 H2</span>
                                 </div>
                             </div>
                             <div>
-                                <div class="tc-label">Testing</div>
-                                <div class="tc-pills">
-                                    <span class="tc-pill"
+                                <div class="tech-category-label">Testing</div>
+                                <div class="tech-category-pills">
+                                    <span class="tech-category-pill"
                                           style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#4ade80">🧪 JUnit 5</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(108,99,255,.1);border-color:rgba(108,99,255,.3);color:#818cf8">🎭 Mockito</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.3);color:#fb923c">🕵️ Jasmine</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.3);color:#60a5fa">⚡ Karma</span>
                                 </div>
                             </div>
                             <div>
-                                <div class="tc-label">Mobile &amp; Version Control</div>
-                                <div class="tc-pills">
-                                    <span class="tc-pill"
+                                <div class="tech-category-label">Mobile &amp; Version Control</div>
+                                <div class="tech-category-pills">
+                                    <span class="tech-category-pill"
                                           style="background:rgba(14,165,233,.1);border-color:rgba(14,165,233,.3);color:#38bdf8">📱 Ionic</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.25);color:#fbbf24">🐙 Git</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(20,143,119,.1);border-color:rgba(20,143,119,.3);color:#4ade80">🦊 GitLab</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(14,30,69,.15);border-color:rgba(100,130,200,.3);color:#60a5fa">🔵 Bitbucket</span>
                                 </div>
                             </div>
                             <div>
-                                <div class="tc-label">Build &amp; DevOps</div>
-                                <div class="tc-pills">
-                                    <span class="tc-pill"
+                                <div class="tech-category-label">Build &amp; DevOps</div>
+                                <div class="tech-category-pills">
+                                    <span class="tech-category-pill"
                                           style="background:rgba(197,75,75,.1);border-color:rgba(197,75,75,.3);color:#f87171">🏗️ Maven</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(14,165,233,.1);border-color:rgba(14,165,233,.25);color:#38bdf8">📦 Azure DevOps</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(0,181,204,.1);border-color:rgba(0,181,204,.3);color:#38bdf8">📋 Jira</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(30,215,96,.1);border-color:rgba(30,215,96,.25);color:#4ade80">🐳 Docker</span>
                                 </div>
                             </div>
                             <div>
-                                <div class="tc-label">IDEs &amp; OS</div>
-                                <div class="tc-pills">
-                                    <span class="tc-pill"
+                                <div class="tech-category-label">IDEs &amp; OS</div>
+                                <div class="tech-category-pills">
+                                    <span class="tech-category-pill"
                                           style="background:rgba(0,133,255,.1);border-color:rgba(0,133,255,.3);color:#60a5fa">💡 IntelliJ IDEA</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.2);color:#e2e8f0">🍎 macOS</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(14,165,233,.1);border-color:rgba(14,165,233,.25);color:#38bdf8">🪟 Windows</span>
-                                    <span class="tc-pill"
+                                    <span class="tech-category-pill"
                                           style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.25);color:#4ade80">🐧 Linux</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="fi" style="transition-delay:.28s">
-                    <div class="grp-lbl" style="margin-bottom:1rem">Certifications &amp; Achievements</div>
+
+                <!-- Certifications -->
+                <div class="animate-on-scroll mt-5" style="transition-delay:.28s">
+                    <div class="group-label mb-3">Certifications &amp; Achievements</div>
                     <div class="cert-grid">
-                        <div class="cert-card" style="--cert-accent:var(--orange)">
-                            <div class="cert-card-top">
-                                <div class="cert-badge-ico">🎓</div>
-                                <div class="cert-card-meta">
-                                    <div class="cert-card-year">2026 – Present</div>
-                                    <div class="cert-card-status cert-status-active">In Progress</div>
+                        <div class="certification-card" style="--cert-accent:var(--orange)">
+                            <div class="certification-card-top">
+                                <div class="certification-badge-icon"
+                                     style="background:rgba(251,146,60,.12);border-color:rgba(251,146,60,.25)">🎓
+                                </div>
+                                <div class="certification-meta">
+                                    <div class="certification-year">2026 – Present</div>
+                                    <div class="certification-status certification-status--in-progress">In Progress
+                                    </div>
                                 </div>
                             </div>
-                            <div class="cert-card-title">MSc. Technology Management with Cybersecurity</div>
-                            <div class="cert-card-issuer">🏛️ BPP University · United Kingdom</div>
-                            <div class="cert-card-tags">
-                                <span class="cert-tag">Cybersecurity</span>
-                                <span class="cert-tag">Management</span>
-                                <span class="cert-tag">Postgraduate</span>
+                            <div class="certification-title">MSc. Technology Management with Cybersecurity</div>
+                            <div class="certification-issuer">🏛️ BPP University · United Kingdom</div>
+                            <div class="certification-tags">
+                                <span class="certification-tag">Cybersecurity</span>
+                                <span class="certification-tag">Management</span>
+                                <span class="certification-tag">Postgraduate</span>
                             </div>
                         </div>
-                        <div class="cert-card" style="--cert-accent:var(--accent)">
-                            <div class="cert-card-top">
-                                <div class="cert-badge-ico">🅰️</div>
-                                <div class="cert-card-meta">
-                                    <div class="cert-card-year">2024 – 2025</div>
-                                    <div class="cert-card-status cert-status-done">Completed</div>
+                        <div class="certification-card" style="--cert-accent:var(--accent)">
+                            <div class="certification-card-top">
+                                <div class="certification-badge-icon"
+                                     style="background:rgba(108,99,255,.12);border-color:rgba(108,99,255,.25)">🅰️
+                                </div>
+                                <div class="certification-meta">
+                                    <div class="certification-year">2024 – 2025</div>
+                                    <div class="certification-status certification-status--completed">Completed</div>
                                 </div>
                             </div>
-                            <div class="cert-card-title">Frontend Developer — Angular &amp; Svelte</div>
-                            <div class="cert-card-issuer">🏢 SenangNvs Sdn. Bhd · Malaysia</div>
-                            <div class="cert-card-tags">
-                                <span class="cert-tag">Angular</span>
-                                <span class="cert-tag">Svelte</span>
-                                <span class="cert-tag">GraphQL</span>
+                            <div class="certification-title">Frontend Developer — Angular &amp; Svelte</div>
+                            <div class="certification-issuer">🏢 SenangNvs Sdn. Bhd · Malaysia</div>
+                            <div class="certification-tags">
+                                <span class="certification-tag">Angular</span>
+                                <span class="certification-tag">Svelte</span>
+                                <span class="certification-tag">GraphQL</span>
                             </div>
                         </div>
-                        <div class="cert-card" style="--cert-accent:var(--green)">
-                            <div class="cert-card-top">
-                                <div class="cert-badge-ico">☕</div>
-                                <div class="cert-card-meta">
-                                    <div class="cert-card-year">2021 – 2024</div>
-                                    <div class="cert-card-status cert-status-done">Completed</div>
+                        <div class="certification-card" style="--cert-accent:var(--green)">
+                            <div class="certification-card-top">
+                                <div class="certification-badge-icon"
+                                     style="background:rgba(16,217,160,.12);border-color:rgba(16,217,160,.25)">☕
+                                </div>
+                                <div class="certification-meta">
+                                    <div class="certification-year">2021 – 2024</div>
+                                    <div class="certification-status certification-status--completed">Completed</div>
                                 </div>
                             </div>
-                            <div class="cert-card-title">Full Stack Developer — Java &amp; Spring Boot</div>
-                            <div class="cert-card-issuer">🚀 S.B Solutions Pvt. Ltd · Nepal</div>
-                            <div class="cert-card-tags">
-                                <span class="cert-tag">Java</span>
-                                <span class="cert-tag">Spring Boot</span>
-                                <span class="cert-tag">REST APIs</span>
+                            <div class="certification-title">Full Stack Developer — Java &amp; Spring Boot</div>
+                            <div class="certification-issuer">🚀 S.B Solutions Pvt. Ltd · Nepal</div>
+                            <div class="certification-tags">
+                                <span class="certification-tag">Java</span>
+                                <span class="certification-tag">Spring Boot</span>
+                                <span class="certification-tag">REST APIs</span>
                             </div>
                         </div>
-                        <div class="cert-card" style="--cert-accent:var(--accent2)">
-                            <div class="cert-card-top">
-                                <div class="cert-badge-ico">🏆</div>
-                                <div class="cert-card-meta">
-                                    <div class="cert-card-year">2017 – 2021</div>
-                                    <div class="cert-card-status cert-status-done">Completed</div>
+                        <div class="certification-card" style="--cert-accent:var(--pink)">
+                            <div class="certification-card-top">
+                                <div class="certification-badge-icon"
+                                     style="background:rgba(244,114,182,.12);border-color:rgba(244,114,182,.25)">🏆
+                                </div>
+                                <div class="certification-meta">
+                                    <div class="certification-year">2017 – 2021</div>
+                                    <div class="certification-status certification-status--completed">Completed</div>
                                 </div>
                             </div>
-                            <div class="cert-card-title">BSc. Information Technology (Hons)</div>
-                            <div class="cert-card-issuer">🎓 Lincoln University College · Nepal</div>
-                            <div class="cert-card-tags">
-                                <span class="cert-tag">Computer Science</span>
-                                <span class="cert-tag">Algorithms</span>
-                                <span class="cert-tag">AI</span>
+                            <div class="certification-title">BSc. Information Technology (Hons)</div>
+                            <div class="certification-issuer">🎓 Lincoln University College · Nepal</div>
+                            <div class="certification-tags">
+                                <span class="certification-tag">Computer Science</span>
+                                <span class="certification-tag">Algorithms</span>
+                                <span class="certification-tag">AI</span>
                             </div>
                         </div>
                     </div>
@@ -757,205 +829,241 @@
 
             <!-- PROJECTS -->
             <section id="projects">
-                <div class="eyebrow fi">Portfolio</div>
-                <h2 class="sec-title fi" style="transition-delay:.05s">Featured Projects</h2>
-                <div class="sec-bar fi" style="transition-delay:.09s"></div>
-                <p class="sec-sub fi" style="transition-delay:.12s">Projects built, led, and shipped — from side
-                    experiments
-                    to production systems.</p>
-                <div class="fbar fi" style="transition-delay:.16s">
-                    <button class="fbtn on" data-filter="all">All</button>
-                    <button class="fbtn" data-filter="fullstack">Full Stack</button>
-                    <button class="fbtn" data-filter="frontend">Frontend</button>
-                    <button class="fbtn" data-filter="backend">Backend</button>
-                    <button class="fbtn" data-filter="mobile">Mobile</button>
-                </div>
-                <div class="proj-g fi" style="transition-delay:.2s">
-                    <div class="pj" data-cat="fullstack">
-                        <div class="pj-ban"
-                             style="background:linear-gradient(135deg,rgba(108,99,255,.15),rgba(79,70,229,.08))">
-                            🛡️<span class="pj-badge"
-                                    style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4);color:var(--accent3)">Full
-                  Stack</span></div>
-                        <div class="pj-body">
-                            <div class="pj-tags"><span class="ptag"
-                                                       style="background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.3);color:var(--accent3)">Angular</span><span
-                                    class="ptag"
-                                    style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);color:#4ade80">Spring Boot</span><span
-                                    class="ptag"
-                                    style="background:rgba(16,217,160,.1);border:1px solid rgba(16,217,160,.3);color:var(--green)">GraphQL</span>
+                <div class="section-eyebrow animate-on-scroll">Portfolio</div>
+                <h2 class="section-title animate-on-scroll" style="transition-delay:.05s">Academic Projects</h2>
+                <div class="section-accent-bar animate-on-scroll" style="transition-delay:.09s"></div>
+                <p class="section-subtitle animate-on-scroll" style="transition-delay:.12s">Projects built and shipped
+                    during my academic journey — from concept to working product.</p>
+
+                <div class="proj-grid animate-on-scroll" style="transition-delay:.16s">
+
+                    <!-- Canteen Management System -->
+                    <div class="pcard">
+                        <div class="pcard-banner"
+                             style="background:linear-gradient(160deg,#0b2318 0%,#0d3322 60%,#091e14 100%)">
+                            <span class="pcard-badge"
+                                  style="background:rgba(16,217,160,.18);border:1px solid rgba(16,217,160,.5);color:#10d9a0">Full Stack</span>
+                            <div class="pcard-emoji">🍽️</div>
+                        </div>
+                        <div class="pcard-body">
+                            <div class="pcard-tags">
+                                <span class="ptag"
+                                      style="background:rgba(221,0,49,.1);border-color:rgba(221,0,49,.4);color:#f87171">Angular</span>
+                                <span class="ptag"
+                                      style="background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.4);color:#60a5fa">TypeScript</span>
+                                <span class="ptag"
+                                      style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.4);color:#fbbf24">Java</span>
+                                <span class="ptag"
+                                      style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.4);color:#4ade80">Spring Boot</span>
+                                <span class="ptag"
+                                      style="background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.4);color:#fb923c">REST APIs</span>
                             </div>
-                            <div class="pj-t">InsurePortal MY</div>
-                            <div class="pj-d">Complex insurance portal for Malaysian clients — multi-step forms, REST
-                                &amp; GraphQL integrations, OnPush optimisation.
+                            <div class="pcard-title">Canteen Management System</div>
+                            <div class="pcard-desc">Enables students to view food items and place orders online,
+                                streamlining the ordering process and eliminating the need for physical presence.
                             </div>
-                            <div class="pj-ft">
-                                <div class="pj-lks"><a href="#" class="pj-lk">🔗 Demo</a><a href="#" class="pj-lk">⭐
-                                    Code</a></div>
-                                <span style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--mut2)">Production</span>
+                            <div class="pcard-footer">
+                                <div class="pcard-links">
+                                    <a href="https://github.com/paribartankalathoki/canteen-management.git"
+                                       target="_blank" class="pcard-btn">
+                                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                                        </svg>
+                                        Demo
+                                    </a>
+                                    <a href="https://github.com/paribartankalathoki/canteen-management.git"
+                                       target="_blank" class="pcard-btn">
+                                        <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                                <span class="pcard-label">Academic</span>
                             </div>
                         </div>
                     </div>
-                    <div class="pj" data-cat="backend">
-                        <div class="pj-ban"
-                             style="background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(132,204,22,.08))">
-                            🏦<span class="pj-badge"
-                                   style="background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);color:#34d399">Backend</span>
+
+                    <!-- Event Management System -->
+                    <div class="pcard">
+                        <div class="pcard-banner"
+                             style="background:linear-gradient(160deg,#140d36 0%,#1c1248 60%,#100b2e 100%)">
+                            <span class="pcard-badge"
+                                  style="background:rgba(129,140,248,.18);border:1px solid rgba(129,140,248,.5);color:#818cf8">Full Stack</span>
+                            <div class="pcard-emoji">🎉</div>
                         </div>
-                        <div class="pj-body">
-                            <div class="pj-tags"><span class="ptag"
-                                                       style="background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:#60a5fa">TypeScript</span><span
-                                    class="ptag"
-                                    style="background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.3);color:var(--orange)">Java</span><span
-                                    class="ptag"
-                                    style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);color:#fbbf24">REST API</span>
+                        <div class="pcard-body">
+                            <div class="pcard-tags">
+                                <span class="ptag"
+                                      style="background:rgba(221,0,49,.1);border-color:rgba(221,0,49,.4);color:#f87171">Angular</span>
+                                <span class="ptag"
+                                      style="background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.4);color:#60a5fa">TypeScript</span>
+                                <span class="ptag"
+                                      style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.4);color:#fbbf24">Java</span>
+                                <span class="ptag"
+                                      style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.4);color:#4ade80">Spring Boot</span>
+                                <span class="ptag"
+                                      style="background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.4);color:#fb923c">REST APIs</span>
                             </div>
-                            <div class="pj-t">LoanFlow</div>
-                            <div class="pj-d">Loan Management System for banks &amp; micro-finance institutions in Nepal
-                                — Angular frontend + Java Spring Boot API.
+                            <div class="pcard-title">Event Management System</div>
+                            <div class="pcard-desc">Allows students to browse upcoming events, submit applications, and
+                                track event details. Admins can manage applications and monitor student interests.
                             </div>
-                            <div class="pj-ft">
-                                <div class="pj-lks"><a href="#" class="pj-lk">🔗 Demo</a><a href="#" class="pj-lk">⭐
-                                    Code</a></div>
-                                <span
-                                        style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--mut2)">Fintech</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pj" data-cat="frontend">
-                        <div class="pj-ban"
-                             style="background:linear-gradient(135deg,rgba(56,189,248,.15),rgba(99,102,241,.08))">
-                            🇵🇭<span class="pj-badge"
-                                    style="background:rgba(56,189,248,.2);border:1px solid rgba(56,189,248,.4);color:#38bdf8">Frontend</span>
-                        </div>
-                        <div class="pj-body">
-                            <div class="pj-tags"><span class="ptag"
-                                                       style="background:rgba(97,218,251,.1);border:1px solid rgba(97,218,251,.3);color:#61dafb">Angular</span><span
-                                    class="ptag"
-                                    style="background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:#60a5fa">Svelte</span><span
-                                    class="ptag"
-                                    style="background:rgba(108,99,255,.1);border:1px solid rgba(108,99,255,.3);color:var(--accent3)">TypeScript</span>
-                            </div>
-                            <div class="pj-t">InsurePortal PH</div>
-                            <div class="pj-d">Insurance portal for Philippines market — Svelte component redesign, full
-                                API integration, client-driven delivery.
-                            </div>
-                            <div class="pj-ft">
-                                <div class="pj-lks"><a href="#" class="pj-lk">🔗 Demo</a><a href="#" class="pj-lk">⭐
-                                    Code</a></div>
-                                <span
-                                        style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--mut2)">Production</span>
+                            <div class="pcard-footer">
+                                <div class="pcard-links">
+                                    <a href="https://github.com/paribartankalathoki/event-management-system.git"
+                                       target="_blank" class="pcard-btn">
+                                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                                        </svg>
+                                        Demo
+                                    </a>
+                                    <a href="https://github.com/paribartankalathoki/event-management-system.git"
+                                       target="_blank" class="pcard-btn">
+                                        <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                                <span class="pcard-label">Academic</span>
                             </div>
                         </div>
                     </div>
-                    <div class="pj" data-cat="mobile">
-                        <div class="pj-ban"
-                             style="background:linear-gradient(135deg,rgba(244,114,182,.15),rgba(251,146,60,.08))">
-                            📱<span class="pj-badge"
-                                   style="background:rgba(244,114,182,.2);border:1px solid rgba(244,114,182,.4);color:#f472b6">Mobile</span>
+
+                    <!-- Social Media Platform -->
+                    <div class="pcard">
+                        <div class="pcard-banner"
+                             style="background:linear-gradient(160deg,#260d1a 0%,#361228 60%,#1e0b14 100%)">
+                            <span class="pcard-badge"
+                                  style="background:rgba(244,114,182,.18);border:1px solid rgba(244,114,182,.5);color:#f472b6">Full Stack</span>
+                            <div class="pcard-emoji">🌐</div>
                         </div>
-                        <div class="pj-body">
-                            <div class="pj-tags"><span class="ptag"
-                                                       style="background:rgba(97,218,251,.1);border:1px solid rgba(97,218,251,.3);color:#61dafb">Ionic</span><span
-                                    class="ptag"
-                                    style="background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.3);color:var(--orange)">Angular</span><span
-                                    class="ptag"
-                                    style="background:rgba(16,217,160,.1);border:1px solid rgba(16,217,160,.3);color:var(--green)">TypeScript</span>
+                        <div class="pcard-body">
+                            <div class="pcard-tags">
+                                <span class="ptag"
+                                      style="background:rgba(221,0,49,.1);border-color:rgba(221,0,49,.4);color:#f87171">Angular</span>
+                                <span class="ptag"
+                                      style="background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.4);color:#60a5fa">TypeScript</span>
+                                <span class="ptag"
+                                      style="background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.4);color:#fb923c">Firebase</span>
+                                <span class="ptag"
+                                      style="background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.4);color:#fbbf24">Realtime DB</span>
                             </div>
-                            <div class="pj-t">FinTrack Mobile</div>
-                            <div class="pj-d">Cross-platform mobile app for loan tracking and repayment schedules —
-                                built with Ionic + Angular for Android and iOS.
+                            <div class="pcard-title">Social Media Platform</div>
+                            <div class="pcard-desc">Users can create profiles, post content, and interact via likes,
+                                reactions, and comments, enabling rich social engagement through CRUD operations on
+                                posts.
                             </div>
-                            <div class="pj-ft">
-                                <div class="pj-lks"><a href="#" class="pj-lk">🔗 Demo</a><a href="#" class="pj-lk">⭐
-                                    Code</a></div>
-                                <span style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--mut2)">Cross-platform</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pj" data-cat="fullstack">
-                        <div class="pj-ban"
-                             style="background:linear-gradient(135deg,rgba(16,217,160,.12),rgba(34,197,94,.07))">
-                            🔗<span class="pj-badge"
-                                   style="background:rgba(16,217,160,.2);border:1px solid rgba(16,217,160,.4);color:var(--green)">Full
-                  Stack</span></div>
-                        <div class="pj-body">
-                            <div class="pj-tags"><span class="ptag"
-                                                       style="background:rgba(97,218,251,.1);border:1px solid rgba(97,218,251,.3);color:#61dafb">Angular</span><span
-                                    class="ptag"
-                                    style="background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.3);color:#f87171">REST</span><span
-                                    class="ptag"
-                                    style="background:rgba(51,103,145,.1);border:1px solid rgba(51,103,145,.3);color:#4d8fbf">Java</span>
-                            </div>
-                            <div class="pj-t">API Gateway Service</div>
-                            <div class="pj-d">Centralised API gateway integrating RESTful and GraphQL for banking
-                                clients — JWT auth, rate limiting, audit logging.
-                            </div>
-                            <div class="pj-ft">
-                                <div class="pj-lks"><a href="#" class="pj-lk">🔗 Demo</a><a href="#" class="pj-lk">⭐
-                                    Code</a></div>
-                                <span
-                                        style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--mut2)">Fintech</span>
+                            <div class="pcard-footer">
+                                <div class="pcard-links">
+                                    <a href="https://github.com/paribartankalathoki/social-media-platform.git"
+                                       target="_blank" class="pcard-btn">
+                                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                                        </svg>
+                                        Demo
+                                    </a>
+                                    <a href="https://github.com/paribartankalathoki/social-media-platform.git"
+                                       target="_blank" class="pcard-btn">
+                                        <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                                <span class="pcard-label">Academic</span>
                             </div>
                         </div>
                     </div>
-                    <div class="pj" data-cat="backend">
-                        <div class="pj-ban"
-                             style="background:linear-gradient(135deg,rgba(251,146,60,.12),rgba(245,158,11,.07))">
-                            💬<span class="pj-badge"
-                                   style="background:rgba(251,146,60,.2);border:1px solid rgba(251,146,60,.4);color:var(--orange)">Backend</span>
+
+                    <!-- Smart Banking -->
+                    <div class="pcard">
+                        <div class="pcard-banner"
+                             style="background:linear-gradient(160deg,#1c1808 0%,#28220a 60%,#161406 100%)">
+                            <span class="pcard-badge"
+                                  style="background:rgba(251,191,36,.18);border:1px solid rgba(251,191,36,.5);color:#fbbf24">Cross-Platform</span>
+                            <div class="pcard-emoji">🏦</div>
                         </div>
-                        <div class="pj-body">
-                            <div class="pj-tags"><span class="ptag"
-                                                       style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);color:#4ade80">Spring Boot</span><span
-                                    class="ptag"
-                                    style="background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:#60a5fa">Spring Boot</span><span
-                                    class="ptag"
-                                    style="background:rgba(51,103,145,.1);border:1px solid rgba(51,103,145,.3);color:#4d8fbf">Java</span>
+                        <div class="pcard-body">
+                            <div class="pcard-tags">
+                                <span class="ptag"
+                                      style="background:rgba(221,0,49,.1);border-color:rgba(221,0,49,.4);color:#f87171">Angular</span>
+                                <span class="ptag"
+                                      style="background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.4);color:#60a5fa">TypeScript</span>
+                                <span class="ptag"
+                                      style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.4);color:#fbbf24">Java</span>
+                                <span class="ptag"
+                                      style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.4);color:#4ade80">Spring Boot</span>
+                                <span class="ptag"
+                                      style="background:rgba(14,165,233,.1);border-color:rgba(14,165,233,.4);color:#38bdf8">Ionic</span>
                             </div>
-                            <div class="pj-t">Client Support Portal</div>
-                            <div class="pj-d">Internal dashboard for tracking client issues, SLA compliance, and feature
-                                requests across banking and fintech clients.
+                            <div class="pcard-title">Smart Banking &amp; Customer Vigilance</div>
+                            <div class="pcard-desc">A cross-platform app allowing customers to generate online tokens
+                                for banking transactions like cash deposit and withdrawal, reducing wait times and
+                                optimizing queue management.
                             </div>
-                            <div class="pj-d">Production-ready auth microservice with OAuth 2.0, MFA, RBAC, audit logs,
-                                and rate
-                                limiting.
-                            </div>
-                            <div class="pj-ft">
-                                <div class="pj-lks"><a href="#" class="pj-lk">🔗 Demo</a><a href="#" class="pj-lk">⭐
-                                    Code</a></div>
-                                <span style="font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--mut2)">Open
-                    Source</span>
+                            <div class="pcard-footer">
+                                <div class="pcard-links">
+                                    <a href="https://drive.google.com/drive/folders/1YTIex-FihW3aUlP2Yx9SvRZZv7LyFmJ4?usp=drive_link"
+                                       target="_blank" class="pcard-btn">
+                                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"
+                                             viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                                        </svg>
+                                        Demo
+                                    </a>
+                                    <a href="https://drive.google.com/drive/folders/1YTIex-FihW3aUlP2Yx9SvRZZv7LyFmJ4?usp=drive_link"
+                                       target="_blank" class="pcard-btn">
+                                        <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                                <span class="pcard-label">Academic</span>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
 
             <!-- CONTACT -->
             <section id="contact">
-                <div class="eyebrow fi">Get In Touch</div>
-                <h2 class="sec-title fi" style="transition-delay:.05s">Let's Build Something Great</h2>
-                <div class="sec-bar fi" style="transition-delay:.09s"></div>
-                <p class="sec-sub fi" style="transition-delay:.12s">Have a project, a role, or just want to talk tech? I
-                    respond within 24 hours.</p>
-                <div class="ct-g fi" style="transition-delay:.16s">
-                    <div class="ct-cards">
-                        <div class="ct-card">
-                            <div class="ct-ico">
+                <div class="section-eyebrow animate-on-scroll">Get In Touch</div>
+                <h2 class="section-title animate-on-scroll" style="transition-delay:.05s">Let's Build Something
+                    Great</h2>
+                <div class="section-accent-bar animate-on-scroll" style="transition-delay:.09s"></div>
+                <p class="section-subtitle animate-on-scroll" style="transition-delay:.12s">Have a project, a role, or
+                    just want to talk tech? I respond within 24 hours.</p>
+                <div class="contact-layout animate-on-scroll" style="transition-delay:.16s">
+                    <!-- Contact Cards column -->
+                    <div class="contact-cards-column">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                 </svg>
                             </div>
                             <div>
-                                <div class="ct-lbl">Email</div>
-                                <div class="ct-val"><a href="mailto:paribartankalathoki@gmail.com" class="__cf_email__">[email&#160;protected]</a>
+                                <div class="contact-card-label">Email</div>
+                                <!-- Email assembled in JS — never exposed in HTML source -->
+                                <div class="contact-card-value">
+                                    <a href="#" class="protected-email-link" id="contact-email-link">[email&#160;protected]</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="ct-card">
-                            <div class="ct-ico">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                           d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -964,92 +1072,88 @@
                                 </svg>
                             </div>
                             <div>
-                                <div class="ct-lbl">Location</div>
-                                <div class="ct-val">London, United Kingdom</div>
+                                <div class="contact-card-label">Location</div>
+                                <div class="contact-card-value">London, United Kingdom</div>
                             </div>
                         </div>
-                        <div class="ct-card">
-                            <div class="ct-ico">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                           d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </div>
                             <div>
-                                <div class="ct-lbl">Response Time</div>
-                                <div class="ct-val">Within 24 hours</div>
+                                <div class="contact-card-label">Response Time</div>
+                                <div class="contact-card-value">Within 24 hours</div>
                             </div>
                         </div>
-                        <div class="ct-card">
-                            <div class="ct-ico">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </div>
                             <div>
-                                <div class="ct-lbl">Availability</div>
-                                <div class="ct-val" style="color:var(--green)">Open to opportunities</div>
+                                <div class="contact-card-label">Availability</div>
+                                <div class="contact-card-value" style="color:var(--green)">Open to opportunities</div>
                             </div>
                         </div>
-                        <div class="ct-soc-box">
-                            <div
-                                    style="font-size:.6rem;font-family:'JetBrains Mono',monospace;color:var(--mut);margin-bottom:.7rem;text-transform:uppercase;letter-spacing:.1em">
+                        <div class="contact-social-box">
+                            <div style="font-size:.6rem;font-family:'JetBrains Mono',monospace;color:var(--muted);margin-bottom:.7rem;text-transform:uppercase;letter-spacing:.1em">
                                 Connect On
                             </div>
-                            <div style="display:flex;gap:.55rem;justify-content:center">
-                                <a href="https://github.com/paribartankalathoki" target="_blank" class="soc"
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="https://github.com/paribartankalathoki" target="_blank" class="social-link"
                                    style="width:36px;height:36px" title="GitHub">
-                                    <svg viewBox="0 0 24 24"
-                                         fill="currentColor" width="15" height="15">
-                                        <path
-                                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                                     </svg>
                                 </a>
-                                <a href="https://www.linkedin.com/in/paribartankalathoki/" target="_blank" class="soc"
-                                   style="width:36px;height:36px" title="LinkedIn">
-                                    <svg viewBox="0 0 24 24"
-                                         fill="currentColor" width="15" height="15">
-                                        <path
-                                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                <a href="https://www.linkedin.com/in/paribartankalathoki/" target="_blank"
+                                   class="social-link" style="width:36px;height:36px" title="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                                     </svg>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="ct-form-box">
-                        <div class="ct-ft">Send a Message ✉️</div>
-                        <div style="display:flex;flex-direction:column;gap:0;flex:1">
-                            <div class="fr2">
-                                <div class="fg">
-                                    <label class="form-label">Name <span class="req-star">*</span></label>
-                                    <input type="text" class="fc" id="ct-name" placeholder="Your Full Name"
-                                           oninput="clearFErr('ct-name')">
-                                    <span class="f-err" id="err-ct-name"></span>
+                    <!-- Contact Form -->
+                    <div class="contact-form-box">
+                        <div class="contact-form-title">Send a Message ✉️</div>
+                        <div class="contact-form-fields">
+                            <div class="contact-form-row">
+                                <div class="field-group">
+                                    <label class="field-label">Name <span class="required-marker">*</span></label>
+                                    <input type="text" class="field-input" id="ct-name" placeholder="Your Full Name"
+                                           oninput="clearFieldError('ct-name')">
+                                    <span class="field-error-message" id="err-ct-name"></span>
                                 </div>
-                                <div class="fg">
-                                    <label class="form-label">Email <span class="req-star">*</span></label>
-                                    <input type="email" class="fc" id="ct-email" placeholder="yourmail@gmail.com"
-                                           oninput="clearFErr('ct-email')">
-                                    <span class="f-err" id="err-ct-email"></span>
+                                <div class="field-group">
+                                    <label class="field-label">Email <span class="required-marker">*</span></label>
+                                    <input type="email" class="field-input" id="ct-email"
+                                           placeholder="yourmail@gmail.com" oninput="clearFieldError('ct-email')">
+                                    <span class="field-error-message" id="err-ct-email"></span>
                                 </div>
                             </div>
-                            <div class="fg">
-                                <label class="form-label">Subject <span class="req-star">*</span></label>
-                                <input type="text" class="fc" id="ct-subject"
+                            <div class="field-group">
+                                <label class="field-label">Subject <span class="required-marker">*</span></label>
+                                <input type="text" class="field-input" id="ct-subject"
                                        placeholder="Project inquiry, collaboration..."
-                                       oninput="clearFErr('ct-subject')">
-                                <span class="f-err" id="err-ct-subject"></span>
+                                       oninput="clearFieldError('ct-subject')">
+                                <span class="field-error-message" id="err-ct-subject"></span>
                             </div>
-                            <div class="fg" style="flex:1;display:flex;flex-direction:column">
-                                <label class="form-label">Message <span class="req-star">*</span></label>
-                                <textarea class="fc" id="ct-msg" style="flex:1;min-height:100px"
+                            <div class="field-group" style="flex:1;display:flex;flex-direction:column">
+                                <label class="field-label">Message <span class="required-marker">*</span></label>
+                                <textarea class="field-input" id="ct-msg" style="flex:1;min-height:100px"
                                           placeholder="Tell me about your project..."
-                                          oninput="clearFErr('ct-msg')"></textarea>
-                                <span class="f-err" id="err-ct-msg"></span>
+                                          oninput="clearFieldError('ct-msg')"></textarea>
+                                <span class="field-error-message" id="err-ct-msg"></span>
                             </div>
-                            <p class="req-note"><span class="req-star">*</span> Required fields</p>
-                            <button class="btn btn-p" style="width:100%;justify-content:center;margin-top:.85rem"
+                            <p class="required-note"><span class="required-marker">*</span> Required fields</p>
+                            <button class="btn-accent" style="width:100%;justify-content:center;margin-top:.85rem"
                                     onclick="handleContact()">Send Message →
                             </button>
                         </div>
@@ -1059,334 +1163,240 @@
 
             <!-- FOOTER -->
             <footer>
-                <div class="footer-inner">
-                    <span class="footer-name"></span>
-                    <span class="footer-cr">© 2026 · Paribartan Kalathoki · London, United Kingdom</span>
-                    <div class="footer-dots">
-                        <div class="fdot" style="background:var(--accent)"></div>
-                        <div class="fdot" style="background:var(--green)"></div>
-                        <div class="fdot" style="background:var(--pink)"></div>
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <span class="footer-copyright">© 2026 · Paribartan Kalathoki · London, United Kingdom</span>
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="footer-dot" style="background:var(--accent)"></div>
+                        <div class="footer-dot" style="background:var(--green)"></div>
+                        <div class="footer-dot" style="background:var(--pink)"></div>
                     </div>
                 </div>
             </footer>
         </main>
-    </div><!-- end page -->
+    </div><!-- end page-layout -->
 </div><!-- end view-portfolio -->
 
-<!-- ═════════════════════════════════════
-   ADMIN LOGIN VIEW
-════════════════════════════════════════ -->
-<!-- ═════════════════════════════════════
-   ADMIN DASHBOARD VIEW
-════════════════════════════════════════ -->
-
 <!-- ═══ MOBILE BOTTOM NAV ═══ -->
-<nav class="mob-nav" id="mob-nav">
-    <div class="mob-inner">
-        <button class="mbn active" data-sec="home" onclick="goTo('home')">
-            <div class="mbn-ico-wrap">
+<nav class="mobile-bottom-nav" id="mobile-bottom-nav">
+    <div class="mobile-nav-inner">
+        <button class="mobile-nav-btn active" data-sec="home" onclick="goTo('home')">
+            <div class="mobile-nav-icon-wrap">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="22" height="22">
                     <path stroke-linecap="round" stroke-linejoin="round"
                           d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/>
                 </svg>
             </div>
-            <span class="ml">Home</span>
+            <span class="mobile-nav-label">Home</span>
         </button>
-        <button class="mbn" data-sec="about" onclick="goTo('about')">
-            <div class="mbn-ico-wrap">
+        <button class="mobile-nav-btn" data-sec="about" onclick="goTo('about')">
+            <div class="mobile-nav-icon-wrap">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="22" height="22">
                     <path stroke-linecap="round" stroke-linejoin="round"
                           d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                 </svg>
             </div>
-            <span class="ml">About</span>
+            <span class="mobile-nav-label">About</span>
         </button>
-        <button class="mbn" data-sec="skills" onclick="goTo('skills')">
-            <div class="mbn-ico-wrap">
+        <button class="mobile-nav-btn" data-sec="skills" onclick="goTo('skills')">
+            <div class="mobile-nav-icon-wrap">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="22" height="22">
                     <path stroke-linecap="round" stroke-linejoin="round"
                           d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/>
                 </svg>
             </div>
-            <span class="ml">Skills</span>
+            <span class="mobile-nav-label">Skills</span>
         </button>
-        <button class="mbn" data-sec="projects" onclick="goTo('projects')">
-            <div class="mbn-ico-wrap">
+        <button class="mobile-nav-btn" data-sec="projects" onclick="goTo('projects')">
+            <div class="mobile-nav-icon-wrap">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="22" height="22">
                     <path stroke-linecap="round" stroke-linejoin="round"
                           d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
                 </svg>
             </div>
-            <span class="ml">Work</span>
+            <span class="mobile-nav-label">Work</span>
         </button>
-        <button class="mbn" data-sec="contact" onclick="goTo('contact')">
-            <div class="mbn-ico-wrap">
+        <button class="mobile-nav-btn" data-sec="contact" onclick="goTo('contact')">
+            <div class="mobile-nav-icon-wrap">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="22" height="22">
                     <path stroke-linecap="round" stroke-linejoin="round"
                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
             </div>
-            <span class="ml">Contact</span>
+            <span class="mobile-nav-label">Contact</span>
         </button>
-        <button class="mob-prof" onclick="openSheet()" aria-label="Profile">
-            <div class="mob-prof-in">
+        <button class="mobile-profile-btn" onclick="openProfileSheet()" aria-label="Profile">
+            <div class="mobile-profile-inner">
                 <img src="assets/images/paribartankalathoki.png" alt="developer"/>
             </div>
         </button>
     </div>
 </nav>
 
-<!-- PROFILE SHEET -->
-<div class="psov" id="psov" onclick="closeSheet()"></div>
-<div class="psht" id="psht">
-    <div class="ps-handle" onclick="closeSheet()"></div>
-    <div class="ps-hd">
-        <div class="ps-ring">
-            <div class="ps-ring-in">
+<!-- PROFILE BOTTOM SHEET -->
+<div class="profile-sheet-overlay" id="profile-sheet-overlay" onclick="closeProfileSheet()"></div>
+<div class="profile-sheet" id="profile-sheet">
+    <div class="sheet-drag-handle" onclick="closeProfileSheet()"></div>
+    <div class="sheet-header">
+        <div class="sheet-avatar-ring">
+            <div class="sheet-avatar-inner">
                 <img src="assets/images/paribartankalathoki.png" alt="developer"/>
             </div>
         </div>
-        <div class="ps-n">Paribartan Kalathoki</div>
-        <div class="ps-r">Full Stack Software Developer</div>
-        <div class="pill" style="margin-bottom:.6rem"><span class="pill-dot"></span>Open · Part-time</div>
-        <div class="ps-bio">4+ years · Angular, Java, Spring Boot · Nepal → Malaysia → UK
-        </div>
+        <div class="sheet-name">Paribartan Kalathoki</div>
+        <div class="sheet-role">Full Stack Software Developer</div>
+        <div class="status-pill" style="margin-bottom:.6rem"><span class="status-dot"></span>Open · Part-time</div>
+        <div class="sheet-bio">4+ years · Angular, Java, Spring Boot · Nepal → Malaysia → UK</div>
     </div>
-    <div class="ps-body">
-        <div class="ps-stats">
-            <div class="pss">
-                <div class="pss-n">4+</div>
-                <div class="pss-l">Years</div>
+    <div class="sheet-body">
+        <div class="sheet-stats">
+            <div class="sheet-stat">
+                <div class="sheet-stat-number">4+</div>
+                <div class="sheet-stat-label">Years</div>
             </div>
-            <div class="pss">
-                <div class="pss-n">2</div>
-                <div class="pss-l">Companies</div>
+            <div class="sheet-stat">
+                <div class="sheet-stat-number">2</div>
+                <div class="sheet-stat-label">Companies</div>
             </div>
-            <div class="pss">
-                <div class="pss-n">3</div>
-                <div class="pss-l">Countries</div>
+            <div class="sheet-stat">
+                <div class="sheet-stat-number">3</div>
+                <div class="sheet-stat-label">Countries</div>
             </div>
-            <div class="pss">
-                <div class="pss-n">2</div>
-                <div class="pss-l">Stacks</div>
+            <div class="sheet-stat">
+                <div class="sheet-stat-number">2</div>
+                <div class="sheet-stat-label">Stacks</div>
             </div>
         </div>
-        <div class="ps-sec">Navigate</div>
-        <div class="ps-it" onclick="closeSheet();goTo('home')">
-            <div class="ps-it-ico" style="background:rgba(108,99,255,.12)">🏠</div>
+        <div class="sheet-section-heading">Navigate</div>
+        <div class="sheet-nav-item" onclick="closeProfileSheet();goTo('home')">
+            <div class="sheet-nav-icon" style="background:rgba(108,99,255,.12)">🏠</div>
             <div>
-                <div class="ps-it-lbl">Home</div>
-                <div class="ps-it-sub">Hero & introduction</div>
+                <div class="sheet-nav-label">Home</div>
+                <div class="sheet-nav-sublabel">Hero &amp; introduction</div>
             </div>
-            <span class="ps-it-arr">›</span>
+            <span class="sheet-nav-arrow">›</span>
         </div>
-        <div class="ps-it" onclick="closeSheet();goTo('about')">
-            <div class="ps-it-ico" style="background:rgba(16,217,160,.1)">👤</div>
+        <div class="sheet-nav-item" onclick="closeProfileSheet();goTo('about')">
+            <div class="sheet-nav-icon" style="background:rgba(16,217,160,.1)">👤</div>
             <div>
-                <div class="ps-it-lbl">About</div>
-                <div class="ps-it-sub">Story & timeline</div>
+                <div class="sheet-nav-label">About</div>
+                <div class="sheet-nav-sublabel">Story &amp; timeline</div>
             </div>
-            <span class="ps-it-arr">›</span>
+            <span class="sheet-nav-arrow">›</span>
         </div>
-        <div class="ps-it" onclick="closeSheet();goTo('skills')">
-            <div class="ps-it-ico" style="background:rgba(59,130,246,.1)">⚡</div>
+        <div class="sheet-nav-item" onclick="closeProfileSheet();goTo('skills')">
+            <div class="sheet-nav-icon" style="background:rgba(59,130,246,.1)">⚡</div>
             <div>
-                <div class="ps-it-lbl">Skills</div>
-                <div class="ps-it-sub">Tech stack & tools</div>
+                <div class="sheet-nav-label">Skills</div>
+                <div class="sheet-nav-sublabel">Tech stack &amp; tools</div>
             </div>
-            <span class="ps-it-arr">›</span>
+            <span class="sheet-nav-arrow">›</span>
         </div>
-        <div class="ps-it" onclick="closeSheet();goTo('projects')">
-            <div class="ps-it-ico" style="background:rgba(251,146,60,.1)">🚀</div>
+        <div class="sheet-nav-item" onclick="closeProfileSheet();goTo('projects')">
+            <div class="sheet-nav-icon" style="background:rgba(251,146,60,.1)">🚀</div>
             <div>
-                <div class="ps-it-lbl">Projects</div>
-                <div class="ps-it-sub">Featured work</div>
+                <div class="sheet-nav-label">Projects</div>
+                <div class="sheet-nav-sublabel">Featured work</div>
             </div>
-            <span class="ps-it-arr">›</span>
+            <span class="sheet-nav-arrow">›</span>
         </div>
-        <span class="ps-it-arr">›</span>
-    </div>
-    <div class="ps-it" onclick="closeSheet();goTo('contact')">
-        <div class="ps-it-ico" style="background:rgba(34,197,94,.1)">📬</div>
-        <div>
-            <div class="ps-it-lbl">Contact</div>
-            <div class="ps-it-sub">Let's work together</div>
+        <div class="sheet-nav-item" onclick="closeProfileSheet();goTo('contact')">
+            <div class="sheet-nav-icon" style="background:rgba(34,197,94,.1)">📬</div>
+            <div>
+                <div class="sheet-nav-label">Contact</div>
+                <div class="sheet-nav-sublabel">Let's work together</div>
+            </div>
+            <span class="sheet-nav-arrow">›</span>
         </div>
-        <span class="ps-it-arr">›</span>
-    </div>
-    <div class="ps-sec">Actions</div>
-    <a href="https://drive.google.com/file/d/1qSBhC4J_Aaqg9dF6xdNX06DwgdTMvhX8/view?usp=drive_link" target="_blank" class="ps-it">
-        <div class="ps-it-ico" style="background:rgba(108,99,255,.12)">📄</div>
-        <div>
-            <div class="ps-it-lbl">Download Resume</div>
-            <div class="ps-it-sub">PDF · Updated Jan 2026</div>
-        </div>
-        <span class="ps-it-arr">↓</span>
-    </a>
-    <div class="ps-sec">Connect</div>
-    <div class="ps-socs">
-        <a href="https://github.com/paribartankalathoki" target="_blank" class="ps-soc" title="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
+        <div class="sheet-section-heading">Actions</div>
+        <a href="https://drive.google.com/file/d/1qSBhC4J_Aaqg9dF6xdNX06DwgdTMvhX8/view?usp=drive_link" target="_blank"
+           class="sheet-nav-item">
+            <div class="sheet-nav-icon" style="background:rgba(108,99,255,.12)">📄</div>
+            <div>
+                <div class="sheet-nav-label">Download Resume</div>
+                <div class="sheet-nav-sublabel">PDF · Updated Jan 2026</div>
+            </div>
+            <span class="sheet-nav-arrow">↓</span>
         </a>
-        <a href="https://www.linkedin.com/in/paribartankalathoki/" target="_blank" class="ps-soc" title="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-        </a>
+        <div class="sheet-section-heading">Connect</div>
+        <div class="sheet-socials">
+            <a href="https://github.com/paribartankalathoki" target="_blank" class="sheet-social-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/paribartankalathoki/" target="_blank" class="sheet-social-link"
+               title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+        </div>
+        <div style="height:.8rem"></div>
     </div>
-    <div style="height:.8rem"></div>
-</div>
 </div>
 
-<!-- SCROLL TOP -->
-<button id="stbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg fill="none" stroke="currentColor"
-         stroke-width="2.5" viewBox="0 0 24 24">
+<!-- SCROLL TO TOP -->
+<button id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
     </svg>
 </button>
 
-<div class="ov" id="post-ov" onclick="if(event.target===this)closeOv('post-ov')"></div>
-<!-- Confirm delete -->
-<div class="conf-ov" id="conf-ov">
-    <div class="conf-b">
+<div class="modal-overlay" id="post-modal-overlay"
+     onclick="if(event.target===this)closeModalOverlay('post-modal-overlay')"></div>
+
+<!-- Confirm Delete Dialog -->
+<div class="confirm-overlay" id="confirm-overlay">
+    <div class="confirm-dialog">
         <div style="font-size:2.1rem;margin-bottom:.65rem">🗑️</div>
-        <div
-                style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.05rem;color:var(--txt);margin-bottom:.38rem">
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text);margin-bottom:.38rem">
             Delete?
         </div>
-        <div style="font-size:.8rem;color:var(--mut);margin-bottom:1.3rem;line-height:1.6" id="conf-msg">This will
-            permanently remove this item.
+        <div style="font-size:.8rem;color:var(--muted);margin-bottom:1.3rem;line-height:1.6" id="confirm-message">This
+            will permanently remove this item.
         </div>
-        <div style="display:flex;gap:.65rem;justify-content:center">
-            <button class="btn btn-g btn-sm"
-                    onclick="closeConf()">Cancel
-            </button>
-            <button class="btn btn-sm" style="background:#ef4444;color:#fff"
+        <div class="d-flex gap-3 justify-content-center">
+            <button class="btn-ghost" onclick="closeConfirmDialog()">Cancel</button>
+            <button style="display:inline-flex;align-items:center;padding:.68rem 1.35rem;border-radius:10px;font-weight:600;font-size:.875rem;background:#ef4444;color:#fff;border:none;cursor:pointer"
                     onclick="doDelete()">Delete
             </button>
         </div>
     </div>
 </div>
-<!-- Toast -->
-<div class="toast-el" id="toast"></div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+<!-- Toast Notification -->
+<div class="toast-notification" id="toast-notification"></div>
+
 <script>
+    /* ════ EMAIL PROTECTION ════
+       Email is never written in HTML. It is assembled here in JS at runtime.
+       Bots scraping HTML source will never find the real address.
+    ════════════════════════════ */
+    (function () {
+        const emailUser = 'paribartankalathoki';
+        const emailDomain = 'gmail' + '.com';
+        const fullEmail = emailUser + '@' + emailDomain;
 
-    /* ════ DATA ════ */
+        // Wire up every protected email link on the page
+        document.querySelectorAll('.protected-email-link').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.location.href = 'mailto:' + fullEmail;
+            });
+        });
 
-    const DEF_PROJECTS = [
-        {
-            id: 1, title: "InsurePortal MY", cat: "frontend", emoji: "🛡️",
-            tags: ["Angular", "TypeScript", "GraphQL"],
-            desc: "Complex insurance portal for Malaysian clients — multi-step forms, REST & GraphQL integrations, OnPush performance optimisation.",
-            badge: "Frontend", badgeColor: "rgba(221,0,49,.2)"
-        },
-        {
-            id: 2, title: "LoanFlow", cat: "fullstack", emoji: "🏦",
-            tags: ["Angular", "Java", "Spring Boot"],
-            desc: "Loan Management System for banks & micro-finance institutions in Nepal. Angular frontend + Java Spring Boot REST API.",
-            badge: "Full Stack", badgeColor: "rgba(16,185,129,.2)"
-        },
-        {
-            id: 3, title: "InsurePortal PH", cat: "frontend", emoji: "🇵🇭",
-            tags: ["Angular", "Svelte", "REST API"],
-            desc: "Insurance portal for Philippines market — Svelte component redesign, full API integration, client-driven delivery.",
-            badge: "Frontend", badgeColor: "rgba(56,189,248,.2)"
-        },
-        {
-            id: 4, title: "FinTrack Mobile", cat: "mobile", emoji: "📱",
-            tags: ["Ionic", "Angular", "TypeScript"],
-            desc: "Cross-platform mobile app for loan tracking and repayment schedules — Ionic + Angular for Android and iOS.",
-            badge: "Mobile", badgeColor: "rgba(244,114,182,.2)"
-        },
-        {
-            id: 5, title: "API Gateway Service", cat: "backend", emoji: "🔗",
-            tags: ["Java", "Spring Boot", "GraphQL"],
-            desc: "Centralised API gateway integrating RESTful and GraphQL for banking clients — JWT auth, rate limiting, audit logs.",
-            badge: "Backend", badgeColor: "rgba(251,146,60,.2)"
-        },
-        {
-            id: 6, title: "Client Support Portal", cat: "fullstack", emoji: "💬",
-            tags: ["Angular", "TypeScript", "REST"],
-            desc: "Internal dashboard for tracking client issues, SLA compliance and feature requests across banking and fintech clients.",
-            badge: "Full Stack", badgeColor: "rgba(16,217,160,.2)"
-        },
-    ];
-
-
-    function loadProjects() {
-        try {
-            const s = localStorage.getItem('ar_projects_v7');
-            return s ? JSON.parse(s) : JSON.parse(JSON.stringify(DEF_PROJECTS));
-        } catch {
-            return JSON.parse(JSON.stringify(DEF_PROJECTS));
-        }
-    }
-
-    function saveProjects(p) {
-        localStorage.setItem('ar_projects_v7', JSON.stringify(p));
-    }
-
-    let projects = loadProjects(), delId = null, delType = null, editId = null;
-
-    /* ════ VIEW SWITCHER ════ */
-    function showView(id) {
-        document.getElementById('view-portfolio').style.display = 'none';
-        document.body.classList.toggle('in-portfolio', id === 'portfolio');
-        document.body.classList.toggle('in-admin', id === 'admin');
-        if (id === 'portfolio') {
-            document.getElementById('view-portfolio').style.display = 'block';
-        }
-        window.scrollTo(0, 0);
-    }
-    function closeConf() {
-        delId = null;
-        document.getElementById('conf-ov').classList.remove('open');
-    }
-
-
-
-    function closeOv(id) {
-        document.getElementById(id).classList.remove('open');
-        document.body.style.overflow = '';
-    }
-
-    /* ════ TOAST ════ */
-    let toastT;
-
-    function toast(msg, type) {
-        const el = document.getElementById('toast');
-        if (!el) return;
-        el.textContent = msg;
-        el.className = 'toast-el show toast-' + (type || 'info');
-        clearTimeout(toastT);
-        toastT = setTimeout(() => {
-            el.className = 'toast-el';
-        }, 3200);
-    }
+        // Also used by the contact form submit
+        window._contactEmail = fullEmail;
+    })();
 
     /* ════ THEME ════ */
     function applyTheme(t) {
         document.documentElement.setAttribute('data-theme', t);
-        const dark = t === 'dark';
-        const ico = dark ? '🌙' : '☀️';
-        const lbl = dark ? 'Dark Mode' : 'Light Mode';
-        ['mtog', 'sb-tog', 'desk-tog'].forEach(id => {
-            const e = document.getElementById(id);
-            if (e) e.textContent = ico;
-        });
-        ['sb-theme-ico', 'ps-theme-ico'].forEach(id => {
-            const e = document.getElementById(id);
-            if (e) e.textContent = ico;
-        });
-        ['sb-theme-lbl', 'ps-theme-lbl'].forEach(id => {
-            const e = document.getElementById(id);
-            if (e) e.textContent = lbl;
+        const icon = t === 'dark' ? '🌙' : '☀️';
+        const label = t === 'dark' ? 'Dark Mode' : 'Light Mode';
+        ['mobile-toggle-thumb', 'desktop-theme-toggle'].forEach(function (id) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = icon;
         });
         localStorage.setItem('ar_theme', t);
     }
@@ -1396,170 +1406,205 @@
     }
 
     applyTheme(localStorage.getItem('ar_theme') || 'dark');
-    showView('portfolio');
 
     /* ════ NAV / SCROLL ════ */
-    function goTo(sec) {
-        showView('portfolio');
-        const el = document.getElementById(sec);
+    function goTo(sectionId) {
+        const el = document.getElementById(sectionId);
         if (!el) return;
         const offset = window.innerWidth <= 960 ? 60 : 0;
         window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - offset - 10, behavior: 'smooth'});
     }
 
-    const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-    const io = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.querySelectorAll('.fi').forEach(el => el.classList.add('v'));
-                const id = e.target.id;
-                document.querySelectorAll('.nit[data-sec]').forEach(b => b.classList.toggle('active', b.dataset.sec === id));
-                document.querySelectorAll('.mbn[data-sec]').forEach(b => b.classList.toggle('active', b.dataset.sec === id));
+    const pageSections = ['home', 'about', 'skills', 'projects', 'contact'];
+    const sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                // Trigger scroll-in animations
+                entry.target.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+                    el.classList.add('is-visible');
+                });
+                // Update active nav state
+                const sectionId = entry.target.id;
+                document.querySelectorAll('.nav-item[data-sec]').forEach(function (btn) {
+                    btn.classList.toggle('active', btn.dataset.sec === sectionId);
+                });
+                document.querySelectorAll('.mobile-nav-btn[data-sec]').forEach(function (btn) {
+                    btn.classList.toggle('active', btn.dataset.sec === sectionId);
+                });
             }
         });
-    }, {threshold: .08, rootMargin: '0px 0px -15% 0px'});
-    sections.forEach(s => {
-        const el = document.getElementById(s);
-        if (el) io.observe(el);
-    });
-    document.querySelectorAll('.fi').forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('v');
+    }, {threshold: 0.08, rootMargin: '0px 0px -15% 0px'});
+
+    pageSections.forEach(function (id) {
+        const el = document.getElementById(id);
+        if (el) sectionObserver.observe(el);
     });
 
-    /* Scroll top */
-    window.addEventListener('scroll', () => {
-        const sb = document.getElementById('stbtn');
-        if (sb) {
-            sb.style.opacity = window.scrollY > 400 ? '1' : '0';
-            sb.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
-            sb.style.transform = window.scrollY > 400 ? 'translateY(0)' : 'translateY(10px)';
+    // Trigger animations for elements already in view on load
+    document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-visible');
+    });
+
+    /* Scroll-to-top button */
+    window.addEventListener('scroll', function () {
+        const btn = document.getElementById('scroll-top-btn');
+        if (btn) {
+            btn.style.opacity = window.scrollY > 400 ? '1' : '0';
+            btn.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+            btn.style.transform = window.scrollY > 400 ? 'translateY(0)' : 'translateY(10px)';
         }
     });
 
-    /* Project filter */
-    document.querySelectorAll('.fbtn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('on'));
-            btn.classList.add('on');
-            const f = btn.dataset.filter;
-            document.querySelectorAll('.pj').forEach(c => {
-                c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
-            });
-        });
-    });
+    /* ════ TYPING EFFECT ════ */
+    const typingRoles = ['Full Stack Developer', 'Angular Developer', 'Java Spring Boot Engineer', 'API Integration Expert', 'TypeScript Developer'];
+    let roleIndex = 0, charIndex = 0, typingForward = true;
 
-    /* Typing effect */
-    const roles = ['Full Stack Developer', 'Angular Developer', 'Java Spring Boot Engineer', 'API Integration Expert', 'TypeScript Developer'];
-    let ri = 0, ci = 0, fwd = true;
-
-    function type() {
+    function runTypingAnimation() {
         const el = document.getElementById('typed-txt');
         if (!el) return;
-        const r = roles[ri];
-        if (fwd) {
-            el.textContent = r.slice(0, ++ci);
-            if (ci > r.length) {
-                fwd = false;
-                setTimeout(type, 1800);
+        const currentRole = typingRoles[roleIndex];
+        if (typingForward) {
+            el.textContent = currentRole.slice(0, ++charIndex);
+            if (charIndex > currentRole.length) {
+                typingForward = false;
+                setTimeout(runTypingAnimation, 1800);
                 return;
             }
         } else {
-            el.textContent = r.slice(0, --ci);
-            if (ci < 0) {
-                fwd = true;
-                ci = 0;
-                ri = (ri + 1) % roles.length;
+            el.textContent = currentRole.slice(0, --charIndex);
+            if (charIndex < 0) {
+                typingForward = true;
+                charIndex = 0;
+                roleIndex = (roleIndex + 1) % typingRoles.length;
             }
         }
-        setTimeout(type, fwd ? 72 : 36);
+        setTimeout(runTypingAnimation, typingForward ? 72 : 36);
     }
 
-    type();
+    runTypingAnimation();
 
-    /* Profile sheet */
-    function openSheet() {
-        document.getElementById('psov').classList.add('open');
-        document.getElementById('psht').classList.add('open');
+    /* ════ PROFILE SHEET ════ */
+    function openProfileSheet() {
+        document.getElementById('profile-sheet-overlay').classList.add('is-open');
+        document.getElementById('profile-sheet').classList.add('is-open');
         document.body.style.overflow = 'hidden';
     }
 
-    function closeSheet() {
-        document.getElementById('psov').classList.remove('open');
-        document.getElementById('psht').classList.remove('open');
+    function closeProfileSheet() {
+        document.getElementById('profile-sheet-overlay').classList.remove('is-open');
+        document.getElementById('profile-sheet').classList.remove('is-open');
         document.body.style.overflow = '';
     }
 
-    let psY = 0;
-    document.getElementById('psht').addEventListener('touchstart', e => {
-        psY = e.touches[0].clientY;
+    let sheetTouchStartY = 0;
+    document.getElementById('profile-sheet').addEventListener('touchstart', function (e) {
+        sheetTouchStartY = e.touches[0].clientY;
     }, {passive: true});
-    document.getElementById('psht').addEventListener('touchmove', e => {
-        if (e.touches[0].clientY - psY > 65) closeSheet();
+    document.getElementById('profile-sheet').addEventListener('touchmove', function (e) {
+        if (e.touches[0].clientY - sheetTouchStartY > 65) closeProfileSheet();
     }, {passive: true});
 
-    /* Contact */
-    function setFErr(id, msg) {
+    /* ════ MODAL OVERLAY ════ */
+    function closeModalOverlay(id) {
         const el = document.getElementById(id);
-        const errEl = document.getElementById('err-' + id);
-        if (el) el.classList.add('fc-err');
-        if (errEl) {
-            errEl.textContent = msg;
-            errEl.classList.add('show');
+        if (el) el.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+
+    /* ════ CONFIRM DIALOG ════ */
+    let pendingDeleteId = null;
+
+    function closeConfirmDialog() {
+        pendingDeleteId = null;
+        document.getElementById('confirm-overlay').classList.remove('is-open');
+    }
+
+    function doDelete() {
+        closeConfirmDialog();
+    }
+
+    /* ════ TOAST ════ */
+    let toastTimer;
+
+    function showToast(message, type) {
+        const el = document.getElementById('toast-notification');
+        if (!el) return;
+        el.textContent = message;
+        el.className = 'toast-notification is-visible toast-notification--' + (type || 'info');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+            el.className = 'toast-notification';
+        }, 3200);
+    }
+
+    /* ════ CONTACT FORM ════ */
+    function showFieldError(fieldId, message) {
+        const input = document.getElementById(fieldId);
+        const errorEl = document.getElementById('err-' + fieldId);
+        if (input) input.classList.add('field-input--error');
+        if (errorEl) {
+            errorEl.textContent = message;
+            errorEl.classList.add('is-shown');
         }
     }
 
-    function clearFErr(id) {
-        const el = document.getElementById(id);
-        const errEl = document.getElementById('err-' + id);
-        if (el) el.classList.remove('fc-err');
-        if (errEl) {
-            errEl.textContent = '';
-            errEl.classList.remove('show');
+    function clearFieldError(fieldId) {
+        const input = document.getElementById(fieldId);
+        const errorEl = document.getElementById('err-' + fieldId);
+        if (input) input.classList.remove('field-input--error');
+        if (errorEl) {
+            errorEl.textContent = '';
+            errorEl.classList.remove('is-shown');
         }
     }
 
-    function clearAllFErr() {
-        ['ct-name', 'ct-email', 'ct-subject', 'ct-msg'].forEach(clearFErr);
+    function clearAllFieldErrors() {
+        ['ct-name', 'ct-email', 'ct-subject', 'ct-msg'].forEach(clearFieldError);
     }
 
     function handleContact() {
-        clearAllFErr();
-        const n = document.getElementById('ct-name').value.trim();
-        const e = document.getElementById('ct-email').value.trim();
-        const s = document.getElementById('ct-subject').value.trim();
-        const m = document.getElementById('ct-msg').value.trim();
-        const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
-        let valid = true;
-        if (!n) {
-            setFErr('ct-name', 'Please enter your full name');
-            valid = false;
+        clearAllFieldErrors();
+        const name = document.getElementById('ct-name').value.trim();
+        const email = document.getElementById('ct-email').value.trim();
+        const subject = document.getElementById('ct-subject').value.trim();
+        const message = document.getElementById('ct-msg').value.trim();
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        let isValid = true;
+
+        if (!name) {
+            showFieldError('ct-name', 'Please enter your full name');
+            isValid = false;
         }
-        if (!e) {
-            setFErr('ct-email', 'Please enter your email address');
-            valid = false;
-        } else if (!emailOk) {
-            setFErr('ct-email', 'Please enter a valid email address');
-            valid = false;
+        if (!email) {
+            showFieldError('ct-email', 'Please enter your email address');
+            isValid = false;
+        } else if (!emailValid) {
+            showFieldError('ct-email', 'Please enter a valid email address');
+            isValid = false;
         }
-        if (!s) {
-            setFErr('ct-subject', 'Please enter a subject');
-            valid = false;
+        if (!subject) {
+            showFieldError('ct-subject', 'Please enter a subject');
+            isValid = false;
         }
-        if (!m) {
-            setFErr('ct-msg', 'Please write a message');
-            valid = false;
+        if (!message) {
+            showFieldError('ct-msg', 'Please write a message');
+            isValid = false;
         }
-        if (!valid) return;
-        const body = 'Name: ' + n + '\nEmail: ' + e + '\n\n' + m;
-        window.location.href = 'mailto:paribartankalathoki@gmail.com?subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(body);
-        ['ct-name', 'ct-email', 'ct-subject', 'ct-msg'].forEach(id => {
+        if (!isValid) return;
+
+        const body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+        // Use the protected email assembled at the top of the script
+        window.location.href = 'mailto:' + window._contactEmail
+            + '?subject=' + encodeURIComponent(subject)
+            + '&body=' + encodeURIComponent(body);
+
+        ['ct-name', 'ct-email', 'ct-subject', 'ct-msg'].forEach(function (id) {
             const el = document.getElementById(id);
             if (el) el.value = '';
         });
-        clearAllFErr();
-        toast('Opening mail client... ✉️', 'ok');
+        clearAllFieldErrors();
+        showToast('Message opened in your mail client!', 'success');
     }
-
 </script>
 </body>
 </html>
